@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+
+<body>
+    <div class="sign_background">
+        <div class="sign_background_in">
+            <div class="sign_background_no1">
+                <a href="index.html"><img src="img/logo-mi2.png" alt=""></a>
+            </div>
+            <div class="sign_background_no2">注册小米帐号</div>
+            <div class="sign_background_no3">
+                <h4>国家/地区</h4>
+                <div class="sign_background_no4">
+                    <select>
+                        <option>中国大陆</option>
+                        <option>美国</option>
+                        <option>中国台湾</option>
+                        <option>中国香港</option>
+                    </select>
+                </div>
+                <p>成功注册帐号后，国家/地区将不能被修改</p>
+                <p style="font-size: 18px;">手机号码/邮箱地址</p>
+                <div class="sign_background_no5">
+                    <div class="sign_no5_div1">
+                        <select>
+                            <option>+86</option>
+                            <option>+1</option>
+                            <option>+886</option>
+                            <option>+852</option>
+                        </select>
+                    </div>
+                    <input class="sign_no5_div2" type="text" placeholder="请输入手机号码">
+                </div>
+
+                <!-- 邮箱输入框（默认隐藏） -->
+                <div class="sign_background_no5_email" style="display: none;">
+                    <input type="email" placeholder="请输入邮箱地址">
+                </div>
+
+                <div class="sign_background_no6">立即注册</div>
+
+            </div>
+            <div class="sign_background_no7">注册帐号即表示您同意并愿意遵守小米 <span>用户协议</span>和<span>隐私政策</span> </div>
+        </div>
+        <div class="sign_background_no8"><img src="img/sign01.jpg" alt=""></div>
+    </div>
+</body>
+<script>
+        // 获取页面元素
+        var countrySelect = document.querySelector('.sign_background_no3 select');
+        var phonePrefixInput = document.querySelector('.sign_no5_div1 select');
+        var phoneInput = document.querySelector('.sign_no5_div2');
+        var emailInputDiv = document.querySelector('.sign_background_no5_email');
+        var phoneDiv = document.querySelector('.sign_background_no5');
+
+        // 定义不同地区的手机号码前缀和是否使用邮箱注册的标志
+        var regions = {
+            '中国大陆': { prefix: '+86', useEmail: false },
+            '美国': { prefix: '+1', useEmail: true },
+            '中国台湾': { prefix: '+886', useEmail: false },
+            '中国香港': { prefix: '+852', useEmail: false }
+        };
+
+        // 当国家/地区选择发生变化时
+        countrySelect.addEventListener('change', function () {
+            var selectedRegion = this.value;
+            var regionInfo = regions[selectedRegion];
+
+            // 更新手机号码前缀
+            if (regionInfo) {
+                // 更新号码前缀（下拉框中的值）
+                phonePrefixInput.value = regionInfo.prefix;
+                // 更新手机号码输入框的提示
+                phoneInput.placeholder = '请输入手机号码（' + regionInfo.prefix + '）';
+            }
+
+            // 判断是否切换为邮箱注册
+            if (regionInfo.useEmail) {
+                // 显示邮箱输入框，隐藏手机号码输入框
+                phoneDiv.style.display = 'none';
+                emailInputDiv.style.display = 'block';
+                console.log('切换为邮箱注册');
+            } else {
+                // 显示手机号码输入框，隐藏邮箱输入框
+                phoneDiv.style.display = 'block';
+                emailInputDiv.style.display = 'none';
+                console.log('使用手机号码注册');
+            }
+        });
+
+        // 初始页面设置，触发一次选择变化事件以初始化状态
+        document.addEventListener('DOMContentLoaded', function() {
+            countrySelect.dispatchEvent(new Event('change')); // 模拟初次触发
+        });
+    </script>
+</html>

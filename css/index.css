@@ -1,0 +1,2636 @@
+img, object { max-width: 100%;} /* 令图片和对象的最大宽度为100%,主要是为了不同屏幕尺寸的兼容.
+								确保图片和对象在各种设备上都能合理显示，不会出现溢出或拉伸变形
+								等问题.确保所有的图片和对象在不同的屏幕上显示时，其最大宽度不会
+								超过其父元素的宽度，从而有效避免了图像的溢出和失真问题。这样的
+								设计能够提升用户在各类设备（如手机、平板和桌面电脑）上的视觉体验，
+								使内容呈现更为美观*/
+*{
+    padding: 0;
+    margin:0;
+    list-style: none;
+    font-family: 微软雅黑;
+}/* 对所有元素进行全局样式设置：
+   - 去除内边距（padding）为 0，使元素在默认情况下不会有额外的内部空白空间。
+   - 去除外边距（margin）为 0，确保元素在页面布局中不会有默认的间距。
+   - 去除列表样式（list-style），通常用于去除无序列表（ul）和有序列表（ol）的默认项目符号或编号。
+   - 设置字体为微软雅黑，统一页面的字体样式，提高页面的可读性和美观性
+	这样的设计目的在于增强页面的整洁性和可读性，使文本呈现更加统一、流畅，符合现代网页设计的趋势*/
+.box{
+    width:100%;
+    height: 2.5rem;
+    background: #333333;
+}/* 设置类名为.box 的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块,适合用作页面的重要信息区域或导航条。
+   - 高度为 2.5rem，为元素指定固定的高度。
+   - 背景颜色为深灰色（#333333），用于设置元素的背景视觉效果 */
+a{
+    text-decoration: none;
+    color: #333;
+    font-family: 微软雅黑;
+}/* 对所有链接（a 标签）进行样式设置：
+   - 去除下划线（text-decoration: none），使链接看起来更简洁。
+   - 文字颜色为深灰色（#333），与整体页面的颜色风格保持一致。
+   - 字体为微软雅黑，确保链接文字的字体与页面其他文字统一 */
+.inner a{
+    color: #b0b0b0;
+    font-size: 0.75rem;
+    line-height: 2.5rem;
+    padding: 0 0.5rem;
+    border-right: 0.0625rem solid #424242;
+}/* 对类名为.inner 元素内部的链接（a 标签）进行特定样式设置：
+   - 文字颜色为浅灰色（#b0b0b0），与类名为.box 元素中的链接文字颜色区分开。
+   - 字体大小为 0.75rem，相对较小，适合在导航栏等区域显示较多的链接。
+   - 行高为 2.5rem，与类名为.box 元素的高度相同，使链接在垂直方向上居中对齐。
+   - 左右内边距为 0.5rem，给链接文字提供一定的水平间距，使其看起来更舒适。
+   - 右侧添加一个 0.0625rem 宽的浅灰色（#424242）边框，用于分隔链接，增强视觉层次感 */
+.inner{
+    margin: 0 auto;
+    width: 76.625rem;
+    height:100%;
+}/* 设置类名为.inner 的元素：
+   - 水平居中（margin: 0 auto），使其在父容器中水平方向居中显示，常用于布局容器的定位。
+   - 宽度为 76.625rem，为元素指定固定的宽度，可能是根据设计稿或页面布局需求设定的。
+   - 高度为 100%，使其高度与父容器相同，通常用于填充父容器的可用空间 */
+.left .max{
+    border: none;
+    padding-right: 0rem;
+    line-height: 2.5rem;
+}/* 对类名为.left 元素内部类名为.max 的元素进行样式设置：
+   - 去除边框（border: none），避免出现不必要的边框。
+   - 右侧内边距为 0rem，确保元素在水平方向上不会有额外的空白。
+   - 行高为 2.5rem，与类名为.inner 元素的行高相同，保持垂直方向的对齐 */
+.left .mix{
+    padding-left: 0rem;
+}/* 对类名为.left 元素内部类名为.mix 的元素进行样式设置：
+   - 左侧内边距为 0rem，确保元素在水平方向上不会有额外的空白 */
+.left{
+    float: left;
+}/* 使类名为.left 的元素向左浮动，常用于创建多列布局，使元素在水平方向上排列 */
+.whiteGL a:hover{
+    color: white;
+}/* 当鼠标悬停在类名为.whiteGL 元素内部的链接（a 标签）上时：
+   - 文字颜色变为白色，用于提供交互反馈，提示用户当前元素可点击或处于活动状态 */
+.orangeGL{
+    font-size: 1.25rem;
+    font-family: 黑体;
+    color: #424242;
+}/* 设置类名为.orangeGL 的元素：
+   - 字体大小为 1.25rem，相对较大，用于突出显示相对重要的文本。
+   - 字体为黑体，与微软雅黑字体区分开。
+   - 文字颜色为深灰色（#424242），与整体页面的颜色风格保持一致 */
+.orange{
+    color: #424242;
+}/* 设置类名为.orange 的元素文字颜色为深灰色（#424242），与类名为.orangeGL 的元素颜色相关联，用于保持颜色的一致性 */
+
+.orangeGL a:hover{
+    color: #ff6700;
+    /* text-decoration:underline; */
+}/* 当鼠标悬停在类名为.orangeGL 元素内部的链接（a 标签）上时：
+   - 文字颜色变为橙色（#ff6700），用于提供交互反馈，突出显示可点击的链接。 */
+.right{
+    float: right;
+}/* 使类名为.right 的元素向右浮动，与类名为.left 的元素相对应，常用于创建左右布局结构 */
+.right img{
+    height: 100%;
+    vertical-align: middle;
+    margin-top: -0.25rem;
+}/* 对类名为.right 元素内部的图片（img 标签）进行样式设置：
+   - 高度为 100%，使其在垂直方向上填充父容器，通常用于使图片与周围元素在高度上保持一致。
+   - 垂直对齐方式为 middle，使图片在垂直方向上与周围的文本或其他元素居中对齐，提高页面的排版效果。
+   - 上外边距为 -0.25rem，用于微调图片的垂直位置，使其看起来更协调 */
+
+.inner:after{
+    content: "";
+    display: block;
+    clear: both;
+}/* 使用伪元素 :after 在类名为.inner 的元素内部的内容之后添加一个空的块级元素，并设置为清除浮动（clear: both）。
+   这是一种常见的清除浮动的方法，用于解决浮动元素可能导致的父容器高度塌陷问题，确保父容器能够正确包裹内部的浮动元素 */
+.logo{
+    width: 76.625rem;
+    height: 6.25rem;
+    margin: 0 auto;
+}/* 设置类名为.logo 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 6.25rem，为元素指定固定的高度。
+   - 水平居中（margin: 0 auto），使其在父容器中水平方向居中显示，常用于页面头部的 logo 布局 */
+.logo_left{
+    width: 3.4375rem;
+    height: 3.4375rem;
+    float: left;
+    margin-top: 1.375rem;
+}/* 设置类名为.logo_left 的元素：
+   - 宽度为 3.4375rem，为元素指定固定的宽度。
+   - 高度为 3.4375rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置 logo 的左侧部分或图标。
+   - 上外边距为 1.375rem，用于调整元素在垂直方向上的位置，使其与周围元素有合适的间距 */
+
+.logo_left:hover{
+	/* 暂无, 预留的交互效果 */
+}
+.logo_center{
+    width: 37.1875rem;
+    height: 1.25rem;
+    float: left;
+    margin-left: 11.75rem;
+    margin-top:2.625rem;
+    font-size: 1rem;
+    color: #333;
+}/* 设置类名为.logo_center 的元素：
+   - 宽度为 37.1875rem，为元素指定固定的宽度。
+   - 高度为 1.25rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置 logo 中间的文本或导航链接。
+   - 左侧外边距为 11.75rem，用于调整元素在水平方向上的位置，使其与左侧的元素有合适的间距。
+   - 上外边距为 2.625rem，用于调整元素在垂直方向上的位置，使其与周围元素有合适的间距。
+   - 字体大小为 1rem，适合显示中等大小的文本。
+   - 文字颜色为深灰色（#333），与整体页面的颜色风格保持一致 */
+.logo_center_product{
+	width: 39.375rem;
+	height: 1.25rem;
+	float: left;
+	margin-left: 7.5rem;
+	margin-top:2.625rem;
+	font-size: 1rem;
+	color: #333;
+}/* 设置类名为.logo_center_product 的元素：
+   - 宽度为 39.375rem，为元素指定固定的宽度。
+   - 高度为 1.25rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，用于放置与产品相关的导航链接或文本。
+   - 左侧外边距为 7.5rem，用于调整元素在水平方向上的位置，使其与左侧的元素有合适的间距。
+   - 上外边距为 2.625rem，用于调整元素在垂直方向上的位置，使其与周围元素有合适的间距。
+   - 字体大小为 1rem，适合显示中等大小的文本。
+   - 文字颜色为深灰色（#333），与整体页面的颜色风格保持一致 */
+.logo_right{
+    position: relative;
+    width: 18.5rem;
+    height: 3.125rem;
+    float: right;
+    margin-top: 1.5625rem;
+    font-size: 0rem;
+}/* 设置类名为.logo_right 的元素：
+   - 相对定位（position: relative），为其内部的绝对定位元素提供定位基准，常用于创建复杂的布局结构。
+   - 宽度为 18.5rem，为元素指定固定的宽度。
+   - 高度为 3.125rem，为元素指定固定的高度。
+   - 向右浮动（float: right），使其在水平方向上向右排列，通常用于放置 logo 右侧的搜索框或其他功能按钮。
+   - 上外边距为 1.5625rem，用于调整元素在垂直方向上的位置，使其与周围元素有合适的间距。
+   - 字体大小为 0rem，因为其内部的元素（如搜索框输入框和按钮）会有自己独立的字体样式设置，这里先将默认字体大小设为 0 */
+
+.logo_input input{
+    width: 14.25rem;
+    height: 2.79rem;
+    border: 0.0625rem solid #e0e0e0;
+    float: left;
+    padding: 0 0.625rem;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: all .2s;
+}/* 设置类名为.logo_input 元素内部的输入框（input 标签）：
+   - 宽度为 14.25rem，为元素指定固定的宽度。
+   - 高度为 2.79rem，为元素指定固定的高度。
+   - 边框为 0.0625rem 宽的浅灰色（#e0e0e0）实线，用于定义输入框的边框样式。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于与其他元素（如搜索按钮）在同一行显示。
+   - 左右内边距为 0.625rem，给输入框内的文本提供一定的水平间距，使其看起来更舒适。
+   - 绝对定位（position: absolute），相对于类名为.logo_right 的父元素进行定位，left: 0 使其左侧与父元素左侧对齐。
+   - z-index: 1，设置元素的堆叠顺序，确保输入框在其他元素之上显示。
+   - 过渡效果（transition: all.2s），当元素的属性发生变化时，会在 0.2 秒内平滑过渡，可能用于在输入框获得焦点或失去焦点时的动画效果，如改变边框颜色或背景颜色等，但目前没有具体的过渡属性变化设置，需要进一步添加或修改相关的 CSS 类来实现 */
+
+.logo_input_div{
+    position: absolute;
+    top: 0.875rem;
+    right: 3.875rem;
+    z-index: 2;
+    text-align: right;
+}/* 设置类名为.logo_input_div 的元素：
+   - 绝对定位（position: absolute），相对于类名为.logo_right 的父元素进行定位。
+   - 顶部外边距为 0.875rem，用于调整元素在垂直方向上的位置。
+   - 右侧外边距为 3.875rem，用于调整元素在水平方向上的位置。
+   - z-index: 2，设置元素的堆叠顺序，使其在输入框之上显示，可能用于显示搜索建议或其他相关信息。
+   - 文本对齐方式为右对齐（text-align: right），通常用于将内部的元素（如搜索建议链接）靠右排列 */
+
+.logo_input_a{
+    display: inline-block;
+    margin-left: 0.3125rem;
+    font-size: 0.75rem;
+    background: #e0e0e0;
+    padding: 0 0.3125rem;
+    line-height: 1.125rem;
+}/* 设置类名为.logo_input_a 的元素：
+   - 以行内块级元素显示（display: inline-block），使其在水平方向上可以与其他行内元素排列，同时又可以设置宽度、高度等块级元素的属性。
+   - 左侧外边距为 0.3125rem，用于调整元素在水平方向上的位置，使其与其他元素有合适的间距。
+   - 字体大小为 0.75rem，适合显示较小的文本。
+   - 背景颜色为浅灰色（#e0e0e0），用于突出显示搜索建议或相关链接。
+   - 左右内边距为 0.3125rem，给文本提供一定的水平间距，使其看起来更舒适。
+   - 行高为 1.125rem，用于调整文本在垂直方向上的位置，使其看起来更协调 */
+
+.logo_input_a:hover{
+    background: #ff6700;
+    color: #fff;
+}/* 当鼠标悬停在类名为.logo_input_a 的元素上时：
+   - 背景颜色变为橙色（#ff6700），用于提供交互反馈，突出显示可点击的搜索建议或相关链接。
+   - 文字颜色变为白色（#fff），使其在橙色背景上更易读，增强视觉效果 */
+
+.logo_right_a{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 0;
+}/* 设置类名为.logo_right_a 的元素：
+   - 宽度为 3rem，为元素指定固定的宽度。
+   - 高度为 3rem，为元素指定固定的高度。
+   - 绝对定位（position: absolute），相对于类名为.logo_right 的父元素进行定位，
+   right: 0 使其右侧与父元素右侧对齐，通常用于放置搜索按钮或其他功能图标 */
+
+
+.logo:after{
+    content: '';
+    clear: both;
+    display: block;
+}/* 使用伪元素 :after 在类名为.bot 的元素内部的内容之后
+	添加一个空的块级元素，并设置为清除浮动（clear: both）。
+   这是一种常见的清除浮动的方法，用于解决浮动元素可能导致的父容器高度塌陷问题，
+   确保父容器能够正确包裹内部的浮动元素 */
+
+
+.scroll{
+    width: 76.625rem;
+    height: 28.75rem;
+    margin: 0 auto;
+    background: blanchedalmond;
+    position: relative;
+}
+
+.scroll img{
+    width: 76.625rem;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.scroll_dot{
+    width: 7.5rem;
+    height: 0.625rem;
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 999;
+}
+.scroll_dot span{
+    width: 0.375rem;
+    height: 0.375rem;
+    border: 0.125rem solid #e0e0e0 ;
+    background:#cdcac2;
+    border-radius: 50%;
+    margin: 0 0.3125rem;
+    display: block;
+    float: left;
+}
+.scroll_dot .scroll_dot_span{
+    background: white;
+}
+.scroll_arrows span{
+    width: 2.5625rem;
+    height: 4.375rem;
+    text-align: center;
+    line-height: 4.3125rem;/* 设置行高，这会影响文本在垂直方向上的布局，接近元素的高度4.375rem，有助于垂直居中文本。 */
+    color: #5f5750;
+    position: absolute; /* 将<span>元素从文档流中脱离，使其可以通过top、left等属性进行精确的定位。 */
+    top: 50%;
+    font-size: 2.5rem;
+    z-index: 99; /* 设置元素的堆叠顺序为99，较高的z - index值会使元素在堆叠时显示在前面，
+				 确保它在可能重叠的元素之上。 */
+    margin-top: -2.1875rem; /* 通过负的外边距调整元素的垂直位置，以实现精确的垂直居中
+							（因为top: 50%只是将元素的顶部定位在父元素高度的50%，
+							通过这个外边距调整可以让元素的中心位于父元素高度的50%处） */
+}
+.scroll_arrows .scroll_arrows_back{
+    background: #5f5750;
+    color: white;
+    /*opacity: 0.7;*/
+}
+.scroll_arrows .left{
+    left: 16.25rem; /* 将具有left类的元素（在scroll_arrows类内部）从左侧定位在距离父元素左边框16.25rem的位置。 */
+}
+.scroll_arrows .right{
+    right: 0;
+}
+.scroll_left{
+    width: 14.75rem;
+    background: #333;
+    font-size: 0.875rem;
+    font-family: 黑体;
+    float: left;
+    padding: 1.25rem 0;
+    /*font-weight: 100;*/
+    letter-spacing: -0.0625rem;
+    position: absolute;
+    top: 0rem;
+    left:0;
+}
+.scr_li{
+    padding-left: 1.875rem;
+    height: 2.625rem;
+    line-height: 2.625rem;
+}
+.scr_li:hover{
+    background: #ff6700;
+}
+.scr_li a{
+    color: white;
+}
+.scroll_right{
+    width: 61.875rem;
+    height: 100%;
+    float: right;
+}
+.scroll:after{
+    content: '';
+    clear: both;
+    display: block;
+    margin-top: 0.875rem;
+}
+
+.bot{
+    width: 76.625rem;
+    height: 10.625rem;
+    margin: 0.875rem auto 0;
+	
+	/* display: grid;
+	grid - template - columns: repeat(3, 1fr); /* 设置三列，每列宽度相等，这里根据图片数量是3来设置  */
+	/* grid - gap: 0.9375rem; /* 图片之间的间距 */ */
+	/* align - items: center; /* 垂直居中对齐元素 */ */ */
+}
+.bot img{
+    float: left;
+    margin-left: 0.9375rem;
+	/* 规范图片大小 */
+	width: 19.75rem; 
+	height: 10.625rem;
+	/* margin - left: 0; /* 不需要左边距了，因为grid布局会自动处理间距 */ */
+}
+.bot_max .bot_first{
+    float: left;
+	/* width: 14.75rem; */
+    width: 14.5625rem;
+    margin-left: 0rem;
+}
+.bot_first a{
+    font-size: 0.8125rem;
+    color: #cdcac2;
+    /* line-height: 5.25rem; */
+    text-align: center;
+}
+.bot_one{
+	width: 14.75rem;
+	height: 10.625rem;
+    /* width: 14.625rem;
+    height: 10.625rem; */
+    /* background-image: url("Xiaomi_submt/img/tob_01.jpg"); */
+	
+	/* display: grid; */
+	/* grid - template - columns: repeat(3, 1fr); /* 创建3列，每列宽度相等 */ */
+	/* grid - gap: 0.125rem; /* 元素之间的间距 */ */
+}
+.bot_one div{
+	width: 4.8rem;
+	height: 5.2rem;
+    /* width: 4.89167rem;
+	height: 5.275rem; */
+	/* width: 4.9167rem; */
+    /* height:5.375rem; */
+    border: 0.0125rem solid #665e57;
+    background: #5f5750; 
+    float: left;
+    text-align: center;
+    line-height: 0rem;
+    font-size: 0.75rem;
+}
+.bot_one img{
+    display: block;
+	height: 1.5rem;
+	width: 1.5rem;
+    margin: 0.9375rem auto 0.9375rem;
+    float: none;
+}
+
+.bot:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.time{
+    width: 76.625rem;
+    height: 24.125rem;
+    margin: 2.8125rem auto 0;
+}/* 设置类名为.time 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 24.125rem，为元素指定固定的高度。
+   - 上外边距为 2.8125rem，使其与上方的元素有一定的间距，
+   水平居中（margin: 2.8125rem auto 0），使其在父容器中水平方向居中显示*/
+.time .H{
+    font-size: 1.375rem;
+    margin-bottom: 1.25rem;
+    font-family: 黑体;
+}/* 设置类名为.time 元素内部类名为.H 的元素：
+   - 字体大小为 1.375rem，用于突出显示标题文本。
+   - 底部外边距为 1.25rem，使标题与下方内容有一定的间距。
+   - 字体为黑体，与整体页面的字体风格相呼应，增强标题的视觉效果 */
+.time_in img{
+    width: 14.625rem;
+    height: 21.25rem;
+    float: left;
+    margin-left: 0.875rem ;
+}/* 设置类名为.time_in 元素内部的图片（img 标签）：
+   - 宽度为 14.625rem，高度为 21.25rem，为图片指定固定的尺寸。
+   - 向左浮动（float: left），使其在水平方向上向左排列，用于创建图片列表的布局。
+   - 左侧外边距为 0.875rem，调整图片之间的水平间距，使布局更合理 */
+.time_in .time_min{
+    margin-left: 0;
+}/* 设置类名为.time_in 元素内部类名为.time_min 的元素左侧外边距为 0，
+	用于特定的图片或元素的对齐调整，确保其在布局中的位置准确 */
+
+.appliances {
+    width: 100%;
+    height: 47.125rem;
+    background: #f5f5f5;
+    margin-top: 2.5625rem;
+}/* 设置类名为.appliances 的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块。
+   - 高度为 47.125rem，为元素指定固定的高度。
+   - 背景颜色为 #f5f5f5（一种浅灰色），用于设置该区域的背景颜色。
+   - 上外边距为 2.5625rem，使其与上方的元素有一定的间距，通常用于在页面中划分不同的区域 */
+
+.app_width{
+    width: 76.625rem;
+    height: 39.9375rem;
+    margin: 0 auto;
+    padding-top: 5.875rem;
+}/* 设置类名为.app_width 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 39.9375rem，为元素指定固定的高度。
+   - 水平居中（margin: 0 auto），使其在父容器中水平方向居中显示。
+   - 上内边距为 5.875rem，用于在元素内部上方留出一定的空白空间，可能用于放置标题或其他装饰元素 */
+
+.app_A{
+    width: 31.25rem;
+    height: 2.8125rem;
+    margin:0 auto;
+    font-size: 1.5rem;
+    float: left;
+}/* 设置类名为.app_A 的元素：
+   - 宽度为 31.25rem，为元素指定固定的宽度。
+   - 高度为 2.8125rem，为元素指定固定的高度。
+   - 水平居中（margin: 0 auto），使其在父容器中水平方向居中显示。
+   - 字体大小为 1.5rem，用于突出显示文本。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置家电分类的标题或标签 */
+
+.app_Ar{
+    width: 45.375rem;
+    height: 2.8125rem;
+    /*background: white;*/
+    float: right;
+}/* 设置类名为.app_Ar 的元素：
+   - 宽度为 45.375rem，为元素指定固定的宽度。
+   - 高度为 2.8125rem，为元素指定固定的高度。
+   - 向右浮动（float: right），使其在水平方向上向右排列，通常与类名为.app_A 的元素相对应，用于放置家电分类的其他相关信息或链接 */
+
+.app_Ar_r{
+    margin-left: 2rem;
+    float: right;
+}/* 设置类名为.app_Ar_r 的元素：
+   - 左侧外边距为 2rem，用于调整元素在水平方向上的位置，使其与左侧的元素有合适的间距。
+   - 向右浮动（float: right），使其在水平方向上向右排列，通常用于放置家电分类的具体子分类链接或标签 */
+
+.app_Ar_r a{
+    font-size: 1.25rem;
+    font-family: 黑体;
+    color: #424242;
+}/* 设置类名为.app_Ar_r 元素内部的链接（a 标签）：
+   - 字体大小为 1.25rem，适合显示中等大小的文本。
+   - 字体为黑体，与整体页面的字体风格相呼应。
+   - 颜色为 #424242（一种深灰色），用于设置链接文字的颜色，与页面的整体色调相协调 */
+
+.app_max{
+    width: 76.625rem;
+    height: 38.5rem;
+}/* 设置类名为.app_max 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 38.5rem，为元素指定固定的高度。
+   - 通常用于放置家电产品的展示区域或相关信息的容器 */
+
+.appl{
+    width: 14.625rem;
+    height: 38.5rem;
+    float: left;
+}/* 设置类名为.appl 的元素：
+   - 宽度为 14.625rem，为元素指定固定的宽度。
+   - 高度为 38.5rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置家电产品的图片或相关信息的左侧部分 */
+
+.appr{
+    width: 62rem;
+    height: 38.5rem;
+    float: left;
+}/* 设置类名为.appr 的元素：
+   - 宽度为 62rem，为元素指定固定的宽度。
+   - 高度为 38.5rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，
+	 通常与类名为.appl 的元素配合，用于放置家电产品的图片或相关信息的右侧部分 */
+
+.appr_min{
+    width: 14.625rem;
+    height: 18.75rem;
+    /*background: #cdcac2;*/
+    float: right;
+}/* 设置类名为.appr_min 的元素：
+   - 宽度为 14.625rem，为元素指定固定的宽度。
+   - 高度为 18.75rem，为元素指定固定的高度。
+   - 向右浮动（float: right），使其在水平方向上向右排列，通常用于放置家电产品的具体信息或图片的小模块 */
+
+.appr_top .appr_min{
+    margin-right: 0.875rem;
+}/* 设置类名为.appr_top 元素内部类名为.appr_min 的元素右侧外边距为 0.875rem，
+	用于调整小模块之间的水平间距，使布局更合理 */
+
+.appr_bottom .appr_min{
+    margin-right: 0.875rem;
+    margin-top: 0.875rem;
+}/* 设置类名为.appr_bottom 元素内部类名为.appr_min 的元素右侧外边距为 0.875rem，
+	上外边距为 0.875rem，同样用于调整小模块之间的水平和垂直间距，使布局更合理 */
+
+#appr_min1{
+    margin-right: 0rem;
+}/* 设置 id 为 appr_min1 的元素右侧外边距为 0rem，
+	用于特定的元素对齐或布局调整，使其与其他元素的位置关系更精确 */
+
+#appr_min2{
+    margin-right: 0rem;
+}/* 同理，设置 id 为 appr_min2 的元素右侧外边距为 0rem，用于特定的布局需求 */
+.appr_min_top{
+    width: 14.625rem;
+    height: 9rem;
+}/* 设置类名为.appr_min_top 的元素：
+   - 宽度为 14.625rem，为元素指定固定的宽度。
+   - 高度为 9rem，为元素指定固定的高度。
+   - 通常用于放置家电产品的图片或相关信息的上半部分 */
+.appr_min_bottom{
+    width: 14.625rem;
+    height: 9rem;
+    background: white;
+    margin-top: 0.875rem;
+}/* 设置类名为.appr_min_bottom 的元素：
+   - 宽度为 14.625rem，为元素指定固定的宽度。
+   - 高度为 9rem，为元素指定固定的高度。
+   - 背景颜色为白色，用于设置该区域的背景颜色。
+   - 上外边距为 0.875rem，使其与上方的元素有一定的间距，通常用于放置家电产品的具体信息或描述 */
+
+.appliances img{
+    transition: all 1s linear;
+}/* 设置类名为.appliances 元素内部的图片（img 标签）在状态变化时的过渡效果：
+   - 所有属性的变化都将在 1 秒内以线性方式过渡，例如图片的缩放、移动、透明度变化等，
+   通常用于创建动画效果或交互反馈，但目前没有具体的触发条件和变化属性设置，
+   需要进一步添加或修改相关的 JavaScript 代码来实现动态效果 */
+
+.appliances img:hover{
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0 2.125rem 0rem #ccc;
+}/* 当鼠标悬停在类名为.appliances 元素内部的图片（img 标签）上时：
+   - 图片在垂直方向上向上移动 0.3125rem（transform: translateY(-0.3125rem)），
+   用于提供一种悬浮的视觉效果。
+   - 添加一个 0 到 2.125rem 模糊半径的浅灰色（#ccc）阴影
+   （box-shadow: 0 0 2.125rem 0rem #ccc），增强图片的立体感和视觉层次感，
+   使图片在鼠标悬停时更突出 */
+
+
+.capabackground{
+    width: 100%;
+    height: 43.75rem;
+    background: #f5f5f5;
+}/* 设置类名为.capabackground 的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块。
+   - 高度为 43.75rem，为元素指定固定的高度。
+   - 背景颜色为 #f5f5f5（一种浅灰色），用于设置该区域的背景颜色，用于产品展示区域的背景设置 */
+
+.capacity{
+    width: 76.625rem;
+    height: 41.125rem;
+    margin: -1.375rem auto 0;
+    padding-top: 2.5rem;
+}/* 设置类名为.capacity 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 41.125rem，为元素指定固定的高度。
+   - 上外边距为 -1.375rem，使其向上移动一定距离，用于调整与上方元素的间距或实现特定的布局效果。
+   - 水平居中（margin: -1.375rem auto 0），使其在父容器中水平方向居中显示。
+   - 上内边距为 2.5rem，用于在元素内部上方留出一定的空白空间，用于放置标题或其他装饰元素 */
+
+.capa_box_top{
+    width: 76.625rem;
+    height: 1.4375rem;
+    font-size: 1.4375rem;
+}/* 设置类名为.capa_box_top 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 1.4375rem，为元素指定固定的高度。
+   - 字体大小为 1.4375rem，用于突出显示标题文本，通常用于产品分类的标题栏设置 */
+
+.capa_box_top_al{
+    width: 12.5rem;
+    height: 1.4375rem;
+    float: left;
+    /*background: #5f5750;*/
+}/* 设置类名为.capa_box_top_al 的元素：
+   - 宽度为 12.5rem，为元素指定固定的宽度。
+   - 高度为 1.4375rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置产品分类的主要类别名称。
+   - 注释掉的 background: #5f5750 表示原本有设置背景颜色为深灰色的效果，但目前暂时不需要该背景颜色 */
+
+.capa_box_top_ar{
+    width: 62.5rem;
+    height: 1.4375rem;
+    float: right;
+}/* 设置类名为.capa_box_top_ar 的元素：
+   - 宽度为 62.5rem，为元素指定固定的width.
+   - 高度为 1.4375rem，为元素指定固定的高度。
+   - 向右浮动（float: right），使其在水平方向上向右排列，通常用于放置产品分类的其他相关信息或链接 */
+
+.capa_box_top_ar_min{
+    float: right;
+    margin-left: 2rem;
+
+}/* 设置类名为.capa_box_top_ar_min 的元素：
+   - 向右浮动（float: right），使其在水平方向上向右排列。
+   - 左侧外边距为 2rem，用于调整元素在水平方向上的位置，使其与左侧的元素有合适的间距，通常用于放置产品的具体分类链接或标签 */
+
+.capa_box{
+    width: 76.625rem;
+    height: 38.4375rem;
+    margin-top: 1.25rem;
+}/* 设置类名为.capa_box 的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 38.4375rem，为元素指定固定的高度。
+   - 上外边距为 1.25rem，使其与上方的元素有一定的间距，通常用于放置产品的展示区域或相关信息的容器 */
+
+.scrip_capa_box{
+    display: none;
+}/* 设置类名为.scrip_capa_box 的元素默认不显示，用于在 JavaScript 控制下
+	动态显示或隐藏产品的详细信息或分类内容，初始状态为隐藏 */
+
+.scrip_capa_box_on{
+    display: block;
+}/* 当元素具有类名为.scrip_capa_box_on 时，将显示该元素，
+	用于在 JavaScript 操作下切换产品的显示状态，使其在需要时显示出来 */
+
+.capa{
+    width: 14.625rem;
+    height: 18.75rem;
+    float: left;
+    margin-right: 0.875rem;
+    position: relative;
+    overflow: hidden;
+}/* 设置类名为.capa的元素：
+   - 宽度为 14.625rem，高度为 18.75rem，为元素指定固定的尺寸，用于展示产品的相关内容区域。
+   - 向左浮动（float: left），使其在水平方向上向左排列，实现多列布局效果。
+   - 右侧外边距为 0.875rem，调整元素之间的水平间距，使布局更合理。
+   - 相对定位（position: relative），为其内部的绝对定位元素提供定位基准，便于实现一些特殊的布局效果。
+   - 溢出隐藏（overflow: hidden），防止内部元素超出该区域显示，保持页面整洁 */
+
+.capa_a{
+    width: 14.625rem;
+    height: 6rem;
+    position: absolute;
+    bottom: 0;
+}/* 设置类名为.capa_a的元素：
+   - 宽度为 14.625rem，高度为 6rem，为元素指定固定的尺寸。
+   - 绝对定位（position: absolute），相对于类名为.capa的父元素进行定位，
+   bottom: 0使其底部与父元素底部对齐，通常用于放置产品的描述信息等内容 */
+
+.capa_a li{
+    text-align: center;
+    font-size: 0.875rem;
+    line-height:1.25rem;
+    font-weight:500;
+    font-family: 黑体;
+    letter-spacing:0rem
+}/* 设置类名为.capa_a元素内部的列表项（li标签）：
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 字体大小为 0.875rem，适合显示中等偏小的文本。
+   - 行高为 1.25rem，调整文本在垂直方向上的位置，使其看起来更协调。
+   - 字体粗细为 500，设置字体的粗细程度。
+   - 字体为黑体，与整体页面的字体风格相呼应。
+   - 字母间距为 0rem，保持文本中字母之间的正常间距 */
+
+.capa_min{
+    width: 14.625rem;
+    height: 8.9375rem;
+    background: white;
+}/* 设置类名为.capa_min的元素：
+   - 宽度为 14.625rem，高度为 8.9375rem，为元素指定固定的尺寸。
+   - 背景颜色为白色，用于设置该区域的背景颜色，用于展示产品的图片或其他特定内容的背景 */
+
+.capa_unright .bottom{
+    margin-top: 0.875rem;
+    position: relative;
+}/* 设置类名为.capa_unright元素内部类名为.bottom的元素：
+   - 上外边距为 0.875rem，使其与上方的元素有一定的间距。
+   - 相对定位（position: relative），为其内部的元素提供定位基准，用于进一步调整内部元素的位置 */
+
+.capa_bottom .capa{
+    margin-top: 0.875rem;
+}/* 设置类名为.capa_bottom元素内部类名为.capa的元素：
+   - 上外边距为 0.875rem，使其与上方的元素有一定的间距，通常用于在垂直方向上排列多个产品展示区域 */
+
+.capa_unright{
+    margin-right: 0;
+}/* 设置类名为.capa_unright的元素右侧外边距为 0，用于特定的布局调整，使其与其他元素紧密排列或对齐 */
+
+.capa_box .tran{
+    width: 11.875rem;
+    height: 0rem;
+    background: #ff6700;
+    position: absolute;
+    bottom: -0.375rem;
+    transition: height .5s linear;
+    opacity: 0;
+    padding: 0 1.375rem;
+}/* 设置类名为.capa_box元素内部类名为.tran的元素：
+   - 宽度为 11.875rem，高度为 0rem，初始高度为 0，用于实现一些动态效果，如展开或隐藏的信息区域。
+   - 背景颜色为橙色（#ff6700），用于突出显示该区域。
+   - 绝对定位（position: absolute），相对于类名为.capa_box的父元素进行定位，
+	 bottom: -0.375rem使其底部稍微向上偏移，初始状态下隐藏在下方。
+   - 高度变化的过渡效果为 0.5 秒线性过渡（transition: height.5s linear），
+	 当高度发生变化时会有平滑的动画效果。
+   - 透明度为 0（opacity: 0），初始状态下不可见。
+   - 左右内边距为 1.375rem，给内部的文本或元素提供一定的水平间距 */
+.capa:hover .tran{
+    transform: translateY(-0.3125rem);
+    height: 5rem;
+    opacity: 1;
+    z-index: 9;
+}/* 当鼠标悬停在类名为.capa的元素上时，其内部类名为.tran的元素：
+   - 在垂直方向上向上移动 0.3125rem（transform: translateY(-0.3125rem)），使其向上滑动显示。
+   - 高度变为 5rem，展开显示更多信息。
+   - 透明度变为 1，使其可见。
+   - z-index: 9，设置元素的堆叠顺序，使其在其他元素之上显示，确保信息能够被用户看到 */
+
+.capa .tran span{
+    color: #ffffff;
+   display: block;
+    text-align: center;
+
+}/* 设置类名为.capa元素内部类名为.tran的元素内部的span元素：
+   - 文字颜色为白色（#ffffff），在橙色背景上更易读。
+   - 以块级元素显示（display: block），独占一行。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示，通常用于显示提示信息或简短的描述 */
+
+.capa_shadow:hover{
+    transition: all .5s linear;
+    transform:translateY(-0.3125rem) ;
+    box-shadow:0 0 2.125rem 0 #cccccc ;
+}/* 当鼠标悬停在类名为.capa_shadow的元素上时：
+   - 所有属性的变化在 0.5 秒内以线性方式过渡（transition: all.5s linear），用于实现一些平滑的动画效果。
+   - 在垂直方向上向上移动 0.3125rem（transform: translateY(-0.3125rem)），使其产生悬浮的视觉效果。
+   - 添加一个 0 到 2.125rem 模糊半径的浅灰色（#cccccc）阴影（box-shadow:0 0 2.125rem 0 #cccccc），
+	 增强元素的立体感和视觉层次感 */
+
+
+.figure_a{
+    width: 7.5rem;
+    height: 3rem;
+    margin-top: 3rem;
+    float: left;
+    padding-left: 1.875rem;
+}/* 设置类名为.figure_a的元素：
+   - 宽度为 7.5rem，高度为 3rem，为元素指定固定的尺寸。
+   - 上外边距为 3rem，使其与上方的元素有一定的间距。
+   - 向左浮动（float: left），使其在水平方向上向左排列。
+   - 左侧内边距为 1.875rem，用于调整元素在水平方向上的位置，使其与左侧的元素有合适的间距，通常用于放置一些图标或文本信息 */
+
+.figure_b{
+    width: 5.25rem;
+    height: 3rem;
+    margin-top: 3rem;
+    float: left;
+}/* 设置类名为.figure_b的元素：
+   - 宽度为 5.25rem，高度为 3rem，为元素指定固定的尺寸。
+   - 上外边距为 3rem，使其与上方的元素有一定的间距。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常与类名为.figure_a的元素配合使用，可能用于放置相关的链接或操作按钮 */
+
+.figure_b_yuan{
+    width: 2.375rem;
+    height:2.375rem;
+    border: 0.3125rem solid #ff6700 ;
+    border-radius:50% ;
+}/* 设置类名为.figure_b_yuan的元素：
+   - 宽度为 2.375rem，高度为 2.375rem，为元素指定固定的尺寸，用于创建圆形的图标或按钮。
+   - 边框为 0.3125rem 宽的橙色（#ff6700）实线，用于突出显示。
+   - 边框半径为 50%，使其呈现圆形 */
+.figure_b_yuan li{
+    text-align: center;
+    line-height: 2.375rem;
+    color: #ff6700;
+    font-size: 1.875rem;
+    font-weight: 900;
+}/* 设置类名为.figure_b_yuan元素内部的列表项（li标签）：
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 行高为 2.375rem，使文本在垂直方向上居中显示。
+   - 颜色为橙色（#ff6700），与边框颜色一致，通常用于表示可点击的图标或按钮。
+   - 字体大小为 1.875rem，较大的字体用于突出显示。
+   - 字体粗细为 900，设置字体的粗细程度，使其更醒目 */
+
+.recommend{
+    width: 100%;
+    height: 24.125rem;
+    background: #f5f5f5;
+}/* 设置类名为.recommend的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块。
+   - 高度为 24.125rem，为元素指定固定的高度。
+   - 背景颜色为 #f5f5f5（一种浅灰色），用于设置该区域的背景颜色，用于推荐产品展示区域的背景设置 */
+
+
+.popular{
+    width: 100%;
+    height: 31.3125rem;
+    background: #f5f5f5;
+}/* 设置类名为.popular的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块。
+   - 高度为 31.3125rem，为元素指定固定的高度。
+   - 背景颜色为 #f5f5f5（一种浅灰色），用于设置该区域的背景颜色，用于产品展示区域的背景设置 */
+
+.popular_background{
+    width: 76.625rem;
+    height: 28.8125rem;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+}/* 设置类名为.popular_background的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 28.8125rem，为元素指定固定的高度。
+   - 水平居中（margin: 0 auto），使其在父容器中水平方向居中显示。
+   - 上内边距为 2.5rem，用于在元素内部上方留出一定的空白空间，用于放置标题或其他装饰元素 */
+
+.popular_box_top{
+    width: 76.625rem;
+    height: 2.6875rem;
+    font-size: 1.4375rem;
+}/* 设置类名为.popular_box_top的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度。
+   - 高度为 2.6875rem，为元素指定固定的高度。
+   - 字体大小为 1.4375rem，用于突出显示标题文本，通常用于热门产品分类的标题栏设置 */
+
+.popular_box_top_al{
+    width: 12.5rem;
+    height: 1.4375rem;
+    float: left;
+    /*background: #5f5750;*/
+}/* 设置类名为.popular_box_top_al的元素：
+   - 宽度为 12.5rem，为元素指定固定的宽度。
+   - 高度为 1.4375rem，为元素指定固定的高度。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置热门产品分类的主要类别名称。
+   - 注释掉的 background: #5f5750 表示原本可能有设置背景颜色为深灰色的效果，但目前被注释掉，可能是因为设计需求的改变或暂时不需要该背景颜色 */
+
+.popu{
+    width: 18.5rem;
+    height: 25.9375rem;
+    background: white;
+    float: left;
+    margin-left: 0.875rem;
+}/* 设置类名为.popu的元素：
+   - 宽度为 18.5rem，高度为 25.9375rem，为元素指定固定的尺寸。
+   - 背景颜色为白色，用于设置该区域的背景颜色，通常用于展示热门产品的具体信息。
+   - 向左浮动（float: left），使其在水平方向上向左排列。
+   - 左侧外边距为 0.875rem，调整元素之间的水平间距，使布局更合理 */
+.popu_unleft{
+    margin-left: 0;
+}/* 设置类名为.popu_unleft的元素左侧外边距为 0，用于特定的布局调整，使其与其他元素紧密排列或对齐 */
+
+.popu_bottom{
+    width: 18.5rem;
+    height: 10rem;
+    background: white;
+    padding-top:2.1875rem;
+}/* 设置类名为.popu_bottom的元素：
+   - 宽度为 18.5rem，高度为 10rem，为元素指定固定的尺寸。
+   - 背景颜色为白色，用于设置该区域的背景颜色，通常用于放置热门产品的详细描述、评价等信息。
+   - 上内边距为 2.1875rem，用于在元素内部上方留出一定的空白空间，用于放置标题或其他装饰元素 */
+
+.popu_shadow:hover{
+    transition: all .5s linear;
+    transform:translateY(-0.3125rem);
+    box-shadow: 0 0 2.125rem 0rem #ccc ;
+}/* 当鼠标悬停在类名为.popu_shadow的元素上时：
+   - 所有属性的变化在 0.5 秒内以线性方式过渡（transition: all.5s linear），用于实现一些平滑的动画效果。
+   - 在垂直方向上向上移动 0.3125rem（transform: translateY(-0.3125rem)），使其产生悬浮的视觉效果。
+   - 添加一个 0 到 2.125rem 模糊半径的浅灰色（#ccc）阴影（box-shadow: 0 0 2.125rem 0rem #ccc），增强元素的立体感和视觉层次感 */
+
+.popu .review{
+    height: 4.5rem;
+    margin: 0rem 1.75rem 1.375rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    overflow: hidden;
+}/* 设置类名为.popu元素内部类名为.review的元素：
+   - 高度为 4.5rem，为元素指定固定的高度。
+   - 左右外边距为 1.75rem，上下外边距为 0rem 和 1.375rem，调整元素在父元素中的位置，使其看起来更协调。
+   - 字体大小为 0.875rem，适合显示中等偏小的文本。
+   - 行高为 1.5rem，调整文本在垂直方向上的位置，使其看起来更协调。
+   - 字体粗细为 400，设置字体的粗细程度。
+   - 颜色为 #333（深灰色），用于设置文本的颜色。
+   - 溢出隐藏（overflow: hidden），防止文本超出该区域显示，保持页面整洁 */
+
+.popu .author{
+    /*display: block;*/
+    height: 1.125rem;
+    margin:0 1.75rem 0.5rem;
+    font-size: 0.75rem;
+    color: #b0b0b0;
+}/* 设置类名为.popu元素内部类名为.author的元素：
+   - 注释掉的display: block表示原本可能有将其设置为块级元素的意图，但目前未生效。
+   - 高度为1.125rem，为元素指定固定的高度。
+   - 左右外边距为1.75rem，下外边距为0.5rem，调整元素在父元素中的位置，使其看起来更协调。
+   - 字体大小为0.75rem，适合显示较小的文本。
+   - 颜色为#b0b0b0（一种浅灰色），用于设置文本的颜色，通常用于显示作者信息，与其他文本颜色区分开 */
+
+.popu .info{
+    width: 85%;
+    margin: 0 auto;
+}/* 设置类名为.popu元素内部类名为.info的元素：
+   - 宽度为85%，使其在父元素中占据一定比例的宽度，通常用于容纳产品的相关信息。
+   - 水平居中（margin: 0 auto），使其在父元素中水平方向居中显示 */
+.popu .title{
+    display: inline;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #333;
+}/* 设置类名为.popu元素内部类名为.title的元素：
+   - 以行内元素显示（display: inline），使其在文本流中与其他行内元素排列。
+   - 字体大小为0.875rem，适合显示中等偏小的文本。
+   - 字体粗细为400，设置字体的粗细程度。
+   - 文本溢出处理为省略号（text-overflow: ellipsis），当文本内容超出元素宽度时，显示省略号，保持页面整洁。
+   - 颜色为#333（深灰色），用于设置文本的颜色，通常用于显示产品标题 */
+
+.popu .sep{
+   color:#e0e0e0;
+}/* 设置类名为.popu元素内部类名为.sep的元素：
+   - 颜色为#e0e0e0（一种浅灰色），通常用于分隔产品信息中的不同部分，如标题和价格之间的分隔线颜色 */
+
+.popu .price{
+    display: inline;
+    color: #ff6700;
+}/* 设置类名为.popu元素内部类名为.price的元素：
+   - 以行内元素显示（display: inline），使其在文本流中与其他行内元素排列。
+   - 颜色为#ff6700（橙色），用于突出显示产品价格，使其与其他文本颜色区分开 */
+
+
+.content{
+    width: 100%;
+    height: 31.3125rem;
+    background: #f5f5f5;
+}/* 设置类名为.content的元素：
+   - 宽度为100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块。
+   - 高度为31.3125rem，为元素指定固定的高度。
+   - 背景颜色为#f5f5f5（一种浅灰色），用于设置该区域的背景颜色，用于内容展示区域的背景设置，如图书、主题等内容 */
+
+.con_title{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}/* 设置类名为.con_title的元素：
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 字体大小为1rem，适合显示中等大小的文本。
+   - 字体粗细为400，设置字体的粗细程度，通常用于显示内容区域的标题 */
+.popu_name{
+    font-family: 黑体;
+    color: #333;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+    overflow: hidden;
+}/* 设置类名为.popu_name的元素：
+   - 字体为黑体，与整体页面的字体风格相呼应。
+   - 颜色为#333（深灰色），用于设置文本的颜色。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 字体大小为1.25rem，用于突出显示产品名称等重要信息。
+   - 字体粗细为400，设置字体的粗细程度。
+   - 行高为1.25，调整文本在垂直方向上的位置，使其看起来更协调。
+   - 溢出隐藏（overflow: hidden），防止文本超出该区域显示，保持页面整洁 */
+
+.popu_desc {
+    margin: 0 3rem 0.625rem;
+    height: 2.5rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    text-align: center;
+    overflow: hidden;
+}/* 设置类名为.popu_desc的元素：
+   - 左右外边距为3rem，上外边距为0，下外边距为0.625rem，调整元素在父元素中的位置，使其看起来更协调。
+   - 高度为2.5rem，为元素指定固定的高度。
+   - 字体大小为0.75rem，适合显示较小的文本。
+   - 行高为1.25rem，调整文本在垂直方向上的位置，使其看起来更协调。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 溢出隐藏（overflow: hidden），防止文本超出该区域显示，保持页面整洁，通常用于显示产品的简短描述 */
+
+.popu_desc a{
+    color: #b0b0b0;
+}/* 设置类名为.popu_desc元素内部的链接（a标签）：
+   - 颜色为#b0b0b0（一种浅灰色），用于设置链接文本的颜色，使其与其他文本颜色区分开，通常用于链接到产品的详细信息或相关操作 */
+
+.popu_price{
+    height: 1.3125rem;
+    margin: 0 0.625rem 0.9375rem;
+    text-align: center;
+    color: #333;
+}/* 设置类名为.popu_price的元素：
+   - 高度为1.3125rem，为元素指定固定的高度。
+   - 左右外边距为0.625rem，下外边距为0.9375rem，调整元素在父元素中的位置，使其看起来更协调。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 颜色为#333（深灰色），用于设置文本的价格颜色，通常用于显示产品价格 */
+.cont_border_top1{
+    color: #ffac13;
+    border-top: 0.0625rem solid #ffac13;
+}/* 设置类名为.cont_border_top1的元素：
+   - 颜色为#ffac13（一种橙色），用于设置元素的颜色，可能用于区分不同类型的内容或突出显示某个部分。
+   - 上边框为0.625rem宽的#ffac13（橙色）实线，通常用于在内容区域顶部添加装饰性边框，以区分不同的内容块 */
+
+.cont_border_top2{
+    color: #83c44e;
+    border-top: 0.0625rem solid #83c44e;
+}/* 与cont_border_top1类似，设置类名为.cont_border_top2的元素颜色为#83c44e（一种绿色），上边框为0.625rem宽的#83c44e（绿色）实线，用于区分不同的内容块或突出显示特定部分 */
+
+.cont_border_top3{
+    color: #e53935;
+    border-top: 0.0625rem solid #e53935;
+}/* 同理，设置类名为.cont_border_top3的元素颜色为#e53935（一种红色），上边框为0.625rem宽的#e53935（红色）实线，用于区分内容块或突出显示 */
+
+.popu_border_top4{
+    color: #2196f3;
+    border-top: 0.0625rem solid #2196f3;
+}/* 设置类名为.popu_border_top4的元素颜色为#2196f3（一种蓝色），上边框为0.625rem宽的#2196f3（蓝色）实线，用于区分内容块或突出显示特定部分 */
+
+
+.video{
+    width: 100%;
+    height: 31.3125rem;
+    background: #f5f5f5;
+}/* 设置类名为.video的元素：
+   - 宽度为100%，使其在父容器中占据整个宽度，通常用于创建全宽的布局块。
+   - 高度为31.3125rem，为元素指定固定的高度。
+   - 背景颜色为#f5f5f5（一种浅灰色），用于设置该区域的背景颜色，可能用于视频展示区域的背景设置 */
+
+.vid{
+    width: 18.5rem;
+    height: 17.875rem;
+    /*background: #ee0900;*/
+    float: left;
+    margin-left: 0.875rem;
+    font-size: 0;
+}/* 设置类名为.vid的元素：
+   - 宽度为18.5rem，高度为17.875rem，为元素指定固定的尺寸。
+   - 向左浮动（float: left），使其在水平方向上向左排列。
+   - 左侧外边距为0.875rem，调整元素之间的水平间距，使布局更合理。
+   - 字体大小为0，可能是因为该元素内部主要是视频内容，不需要显示文字，或者文字将通过其他方式（如视频标题）进行显示 */
+
+.video_top{
+    width: 18.5rem;
+    height: 11.25rem;
+    background: white;
+    position: relative;
+}/* 设置类名为.video_top的元素：
+   - 宽度为18.5rem，高度为11.25rem，为元素指定固定的尺寸。
+   - 背景颜色为白色，用于设置该区域的背景颜色，通常用于放置视频播放器或视频封面。
+   - 相对定位（position: relative），为其内部的绝对定位元素提供定位基准，便于实现一些特殊的布局效果，如视频播放按钮的定位 */
+
+.this_vid{
+    width: 100%;
+    height: 11.25rem;
+    position: absolute;
+    top: 0;
+
+}/* 设置类名为.this_vid的元素：
+   - 宽度为100%，使其在父元素中占据整个宽度，通常用于实现视频的全屏播放效果或覆盖整个视频展示区域。
+   - 高度为11.25rem，为元素指定固定的高度。
+   - 绝对定位（position: absolute），相对于类名为.video_top的父元素进行定位，top: 0使其顶部与父元素顶部对齐，通常用于放置视频内容或视频播放器 */
+
+.video_bottom{
+    width: 18.5rem;
+    height: 5.0625rem;
+    background: white;
+    padding-top:1.5625rem;
+}/* 设置类名为.video_bottom的元素：
+   - 宽度为18.5rem，高度为5.0625rem，为元素指定固定的尺寸。
+   - 背景颜色为白色，用于设置该区域的背景颜色，通常用于放置视频的标题、描述等信息。
+   - 上内边距为1.5625rem，用于在元素内部上方留出一定的空白空间，可能用于放置标题或其他装饰元素 */
+
+.vid_title{
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+}/* 设置类名为.vid_title的元素：
+   - 字体大小为0.875rem，适合显示中等偏小的文本。
+   - 字体粗细为400，设置字体的粗细程度。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 颜色为#333（深灰色），用于设置文本的颜色，通常用于显示视频标题 */
+
+.vid_title a:hover{
+    color: #ff6700;
+}/* 当鼠标悬停在类名为.vid_title元素内部的链接（a标签）上时：
+   - 颜色变为#ff6700（橙色），用于提供交互反馈，突出显示可点击的视频标题链接 */
+
+.vid_desc{
+    height: 1.125rem;
+    text-align: center;
+    /*margin: 0;*/
+    font-size: 0.75rem;
+    line-height: 3;
+    color: #b0b0b0;
+}/* 设置类名为.vid_desc的元素：
+   - 高度为1.125rem，为元素指定固定的高度。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 注释掉的margin: 0表示原本可能有设置外边距为0的意图，但目前未生效。
+   - 字体大小为0.75rem，适合显示较小的文本。
+   - 行高为3，调整文本在垂直方向上的位置，使其看起来更协调。
+   - 颜色为#b0b0b0（一种浅灰色），用于设置文本的颜色，通常用于显示视频的简短描述 */
+
+
+.popular{
+    width: 100%;
+    height: 31.3125rem;
+    background: #f5f5f5;
+}/* 再次出现的类名为.popular的元素，与前面的设置相同，用于创建一个全宽、固定高度且背景为浅灰色的布局块，可能用于重复展示热门产品或其他相关内容 */
+
+.popular_background{
+    width: 76.625rem;
+    height: 28.8125rem;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+}/* 同样，类名为.popular_background的元素与前面的设置类似，用于创建一个在水平方向居中、具有一定内边距和固定尺寸的容器，可能用于放置热门产品的具体展示内容 */
+
+.popular_box_top{
+    width: 76.625rem;
+    height: 2.6875rem;
+    font-size: 1.4375rem;
+}/* 类名为.popular_box_top的元素与前面的设置类似，用于创建一个具有固定宽度、高度和字体大小的标题栏，可能用于热门产品分类的标题显示 */
+
+.popular_box_top_al{
+    width: 12.5rem;
+    height: 1.4375rem;
+    float: left;
+    /*background: #5f5750;*/
+}/* 类名为.popular_box_top_al的元素与前面的设置类似，用于创建一个向左浮动、具有固定尺寸的元素，可能用于放置热门产品分类的主要类别名称，注释掉的背景颜色表示原本可能有设置但目前未生效 */
+
+
+.popu_unleft{
+    margin-left: 0;
+}/* 类名为.popu_unleft的元素与前面的设置类似，将左侧外边距设置为0，可能用于特定的布局调整，使其与其他元素紧密排列或对齐 */
+
+
+.popu_shadow:hover{
+    transition: all .5s linear;
+    transform:translateY(-0.3125rem);
+    box-shadow: 0 0 2.125rem 0rem #ccc ;
+}/* 当鼠标悬停在类名为.popu_shadow的元素上时，与前面的设置类似，实现元素在垂直方向上的移动和阴影效果，用于提供交互反馈和增强视觉效果 */
+
+.popu .review{
+    height: 4.5rem;
+    margin: 0rem 1.75rem 1.375rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    overflow: hidden;
+}/* 再次设置类名为.popu元素内部类名为.review的元素样式：
+   - 高度为 4.5rem，为元素指定固定的高度，用于限制评论内容的显示区域。
+   - 左右外边距为 1.75rem，上下外边距分别为 0rem 和 1.375rem，调整元素在父元素中的位置，使其在布局中更协调。
+   - 字体大小为 0.875rem，适合显示中等偏小的文本，符合一般评论内容的字体大小需求。
+   - 行高为 1.5rem，调整文本在垂直方向上的位置，使文本行之间有合适的间距，便于阅读。
+   - 字体粗细为 400，设置字体的粗细程度，保持文本的清晰可读性。
+   - 颜色为 #333（深灰色），用于设置文本的颜色，与页面整体的颜色风格相匹配。
+   - 溢出隐藏（overflow: hidden），防止评论内容超出该区域显示，保持页面整洁美观 */
+
+.popu .author{
+    /*display: block;*/
+    height: 1.125rem;
+    margin:0 1.75rem 0.5rem;
+    font-size: 0.75rem;
+    color: #b0b0b0;
+}/* 再次设置类名为.popu元素内部类名为.author的元素样式：
+   - 注释掉的 display: block 表示原本可能有将其设置为块级元素的意图，但目前未生效。
+   - 高度为 1.125rem，为元素指定固定的高度，用于限制作者信息的显示区域。
+   - 左右外边距为 1.75rem，下外边距为 0.5rem，调整元素在父元素中的位置，使其在布局中更协调。
+   - 字体大小为 0.75rem，适合显示较小的文本，符合一般作者信息的字体大小需求。
+   - 颜色为 #b0b0b0（一种浅灰色），用于设置文本的颜色，与评论内容的颜色区分开，突出作者信息 */
+
+.popu .info{
+    width: 85%;
+    /*background: orange;*/
+    margin: 0 auto;
+}/* 再次设置类名为.popu元素内部类名为.info的元素样式：
+   - 宽度为 85%，使其在父元素中占据一定比例的宽度，通常用于容纳产品的相关信息，保持布局的灵活性。
+   - 注释掉的 background: orange 表示原本可能有设置背景颜色为橙色的效果，但目前被注释掉，可能是因为设计需求的改变或暂时不需要该背景颜色。
+   - 水平居中（margin: 0 auto），使其在父元素中水平方向居中显示，保证信息在水平方向上的对齐和美观 */
+
+.popu .title{
+    display: inline;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #333;
+}/* 再次设置类名为.popu元素内部类名为.title的元素样式：
+   - 以行内元素显示（display: inline），使其在文本流中与其他行内元素排列，符合一般标题的显示方式。
+   - 字体大小为 0.875rem，适合显示中等偏小的文本，用于显示产品标题。
+   - 字体粗细为 400，设置字体的粗细程度，保持文本的清晰可读性。
+   - 文本溢出处理为省略号（text-overflow: ellipsis），当文本内容超出元素宽度时，显示省略号，避免文本过长影响页面布局，保持页面整洁 */
+
+.popu .sep{
+    color:#e0e0e0;
+}/* 再次设置类名为.popu元素内部类名为.sep的元素样式：
+   - 颜色为 #e0e0e0（一种浅灰色），通常用于分隔产品信息中的不同部分，如标题和价格之间的分隔线颜色，起到区分和美化页面的作用 */
+
+
+.foot{
+    width: 100%;
+    height: 16.375rem;
+    background: #fff;
+}/* 设置类名为.foot的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的底部栏布局。
+   - 高度为 16.375rem，为元素指定固定的高度，用于容纳底部栏的各种信息和链接。
+   - 背景颜色为白色（#fff），使底部栏与页面其他部分有明显的区分，同时保持简洁的外观 */
+
+.foot_ul{
+    width: 76.625rem;
+    /*height: 5rem;*/
+    margin: 0 auto;
+    border-bottom: 0.0625rem solid #e0e0e0;
+    padding: 1.6875rem 0 ;
+    font-size: 0rem;
+    /*display: block;*/
+}/* 设置类名为.foot_ul的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度，通常用于限制底部导航链接的水平范围。
+   - 注释掉的 height: 5rem 表示原本可能有设置高度为 5rem 的意图，但目前未生效。
+   - 水平居中（margin: 0 auto），使其在父元素中水平方向居中显示，保证导航链接在底部栏中的居中对齐。
+   - 底部边框为 0.0625rem 宽的浅灰色（#e0e0e0）实线，用于分隔底部栏和上方的内容，增加页面的层次感。
+   - 上下内边距为 1.6875rem 和 0，调整元素在垂直方向上的位置，为导航链接提供合适的空间。
+   - 字体大小为 0rem，可能是因为其内部的链接（a 标签）会有自己独立的字体样式设置，这里先将默认字体大小设为 0 */
+
+.foot_li{
+    width: 19.8%;
+    border-right: 0.0625rem solid #e0e0e0;
+    height: 1.5625rem;
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    /*color: #e0e0e0;*/
+    display: inline-block;
+    text-align: center;
+}/* 设置类名为.foot_li的元素：
+   - 宽度为 19.8%，根据父元素宽度计算出每个列表项的宽度，使其在水平方向上均匀分布。
+   - 右侧边框为 0.0625rem 宽的浅灰色（#e0e0e0）实线，用于分隔每个导航链接，增加视觉清晰度。
+   - 高度为 1.5625rem，为元素指定固定的高度，用于限制导航链接的垂直空间。
+   - 字体大小为 1rem，适合显示中等大小的文本，用于显示底部导航链接的文字。
+   - 行高为 1.5625rem，使文本在垂直方向上居中对齐，提高页面的美观性。
+   - 注释掉的 color: #e0e0e0 表示原本可能有设置文本颜色为浅灰色的意图，但目前未生效。
+   - 以行内块级元素显示（display: inline-block），使其在水平方向上可以与其他行内元素排列，同时又可以设置宽度、高度等块级元素的属性，便于布局。
+   - 文本对齐方式为居中（text-align: center），使导航链接文字在水平方向上居中显示，方便用户点击和查看 */
+
+.foot_fot{
+    border-right: 0;
+}/* 设置类名为.foot_fot的元素：
+   - 右侧边框为 0，可能是用于去除最后一个导航链接右侧的边框，使页面看起来更整洁，避免多余的边框影响美观 */
+
+.foot_center{
+    width: 76.625rem;
+    /*height: 12rem;*/
+    margin: 0 auto;
+    font-size: 0rem;
+}/* 设置类名为.foot_center的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度，通常用于限制底部中心区域的水平范围。
+   - 注释掉的 height: 12rem 表示原本可能有设置高度为 12rem 的意图，但目前未生效。
+   - 水平居中（margin: 0 auto），使其在父元素中水平方向居中显示，保证底部中心区域在底部栏中的居中对齐。
+   - 字体大小为 0rem，可能是因为其内部的元素会有自己独立的字体样式设置，这里先将默认字体大小设为 0 */
+
+.foot_cen_left{
+    width: 60.9375rem;
+    float: left;
+    padding: 2.5rem 0;
+}/* 设置类名为.foot_cen_left的元素：
+   - 宽度为 60.9375rem，为元素指定固定的宽度，通常用于放置底部中心区域左侧的内容，如帮助中心等信息。
+   - 向左浮动（float: left），使其在水平方向上向左排列，与右侧的元素形成左右布局结构。
+   - 上下内边距为 2.5rem 和 0，调整元素在垂直方向上的位置，为内部的内容提供合适的空间 */
+
+.foot_cen_right{
+    width: 15.5625rem;
+    float: left;
+    margin: 2.5rem 0 ;
+    border-left: 0.0625rem solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}/* 设置类名为.foot_cen_right的元素：
+   - 宽度为 15.5625rem，为元素指定固定的width，通常用于放置底部中心区域右侧的内容，如客服电话等信息。
+   - 向左浮动（float: left），使其在水平方向上向左排列，与左侧的元素形成左右布局结构。
+   - 上下外边距为 2.5rem 和 0，调整元素在垂直方向上的位置，使其与左侧元素在垂直方向上对齐。
+   - 左侧边框为 0.0625rem 宽的浅灰色（#e0e0e0）实线，用于分隔左右两侧的内容，增加视觉清晰度。
+   - 文本对齐方式为居中（text-align: center），使内部的文本在水平方向上居中显示，方便用户查看。
+   - 颜色为 #616161（一种深灰色），用于设置文本的颜色，与页面整体的颜色风格相匹配 */
+
+.foot_dl{
+    width: 16.6%;
+    float: left;
+}/* 设置类名为.foot_dl的元素：
+   - 宽度为 16.6%，根据父元素宽度计算出每个定义列表（dl）的宽度，使其在水平方向上均匀分布，通常用于放置帮助中心的各个分类。
+   - 向左浮动（float: left），使其在水平方向上向左排列，形成多列布局结构 */
+
+.foot_dt{
+    margin: -0.0625rem 0 1.625rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #424242;
+
+}/* 设置类名为.foot_dt的元素：
+   - 上下外边距分别为 -0.0625rem 和 1.625rem，调整元素在垂直方向上的位置，使其在定义列表中处于合适的位置。
+   - 字体大小为 0.875rem，适合显示中等偏小的文本，用于显示帮助中心分类的标题。
+   - 行高为 1.25，调整文本在垂直方向上的位置，使文本行之间有合适的间距，便于阅读。
+   - 颜色为 #424242（一种深灰色），用于设置文本的颜色，与页面整体的颜色风格相匹配 */
+
+.foot_dd{
+    margin: 0.625rem 0 0;
+    font-size: 0.75rem;
+
+    /*width: 6.25rem;*/
+    /*font-size: 1rem;*/
+    /*!*color: #03b3ad;*!*/
+    /*font-weight: 400;*/
+    /*line-height: 2.5rem;*/
+    /*margin: -0.0625rem 0 1.625rem;*/
+
+}/* 设置类名为.foot_dd的元素：
+   - 上下外边距分别为 0.625rem 和 0，调整元素在垂直方向上的位置，使其在定义列表中处于合适的位置。
+   - 字体大小为 0.75rem，适合显示较小的文本，用于显示帮助中心分类下的具体链接。 */
+
+.foot_dd a{
+    color: #757575;
+}/* 设置类名为.foot_dd元素内部的链接（a 标签）：
+   - 颜色为 #757575（一种浅灰色），用于设置链接文本的颜色，使其与其他文本颜色区分开，同时保持低调的视觉效果，不影响页面整体的美观性 */
+
+.foot-phone{
+    /*text-align: center;*/
+    /*font-size: 0.9375rem;*/
+    /*margin-top: 1.875rem;*/
+    /*color: orange;*/
+
+    margin: 0 0 0.3125rem;
+    font-size: 1.375rem;
+    line-height: 1;
+    color: #ff6700;
+
+}/* 设置类名为.foot-phone的元素：
+   - 上下外边距分别为 0 和 0.3125rem，调整元素在垂直方向上的位置，使其在底部栏中处于合适的位置。
+   - 字体大小为 1.375rem，较大的字体用于突出显示客服电话，方便用户快速识别。
+   - 行高为 1，使文本在垂直方向上紧密排列，不浪费空间。
+   - 颜色为 #ff6700（橙色），用于突出显示客服电话，吸引用户的注意力，方便用户快速找到并拨打 */
+
+.foot-right-center{
+    /*font-size: 0.875rem;*/
+    /*text-align: center;*/
+    /*line-height: 1.125rem;*/
+    /*padding: 1.875rem 0;*/
+    /*color: #333333;*/
+
+    margin: 0 0 1rem;
+    font-size: 0.75rem;
+}/* 设置类名为.foot-right-center的元素：
+   - 上下外边距分别为 0 和 1rem，调整元素在垂直方向上的位置，使其在底部栏中处于合适的位置。
+   - 字体大小为 0.75rem，适合显示较小的文本，用于显示客服电话的相关说明信息 */
+
+.foot-right-bottmo{
+    /*display: block;*/
+    /*width: 9.375rem;*/
+    /*font-size: 0.6875rem;*/
+    /*text-align: center;*/
+    /*line-height: 1.875rem;*/
+    /*color: orange;*/
+    /*margin: 0 auto;*/
+    border: 0.0625rem solid #ff6700;
+
+    border-color: #ff6700;
+    background: #fff;
+    color: #ff6700;
+    width: 7.375rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+    line-height: 2.125rem;
+}/*- 边框为 0.0625rem 宽的橙色（#ff6700）实线，用于突出显示该按钮或链接的边界，吸引用户注意。
+   - 边框颜色明确设置为橙色（#ff6700），确保在不同浏览器或环境下边框颜色的一致性。
+   - 背景颜色为白色（#fff），使按钮在页面上有清晰的视觉区分，同时保持简洁的外观。
+   - 文字颜色为橙色（#ff6700），与边框颜色相呼应，突出显示按钮上的文字，通常用于表示可操作的链接或按钮，如联系客服等。
+   - 宽度为 7.375rem，高度为 1.75rem，为元素指定固定的尺寸，使其在页面布局中占据合适的空间，符合一般按钮的大小比例。
+   - 字体大小为 0.75rem，适合显示较小的文本，确保按钮上的文字清晰可读，同时不会因字体过大而影响页面布局。
+   - 行高为 2.125rem，调整文本在垂直方向上的位置，使文字在按钮内垂直居中，提高按钮的美观性和用户交互体验。 */
+
+.fot_bot_max{
+    width: 100%;
+    background: #fafafa;
+    font-size: 0.75rem;
+    padding: 0 0 1.25rem;
+}/* 设置类名为.fot_bot_max的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的底部区域，用于展示页脚的其他信息。
+   - 背景颜色为 #fafafa（一种浅灰色），用于设置该区域的背景颜色，与页面主体颜色有所区分，同时保持整体的简洁和协调。
+   - 字体大小为 0.75rem，统一设置该区域内文本的字体大小，适合显示较小的文本，如版权信息等。
+   - 下内边距为 1.25rem，在元素底部留出一定的空白空间，避免底部内容与页面边缘过于贴近，提高页面的美观性。 */
+
+.fot_bot{
+    width: 76.625rem;
+    margin: 0 auto;
+    padding: 1.875rem 0 ;
+    display: block;
+}/* 设置类名为.fot_bot的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度，通常用于限制页脚底部部分内容的水平范围，使其在页面中保持合适的宽度比例。
+   - 水平居中（margin: 0 auto），使其在父元素中水平方向居中显示，保证页脚底部内容在页面底部的居中对齐，提高页面的整体美观性。
+   - 上下内边距为 1.875rem 和 0，为内部的元素提供合适的垂直空间，避免内容过于拥挤。
+   - 以块级元素显示（display: block），独占一行，确保该元素在页面布局中的独立性和稳定性。 */
+
+.fot_bot_logo{
+    display: inline-block;
+    /*position: absolute;*/
+    float: left;
+	width: 3.4375rem;
+	height:3.4375rem ;
+    margin-right: 0.625rem;
+}/* 设置类名为.fot_bot_logo的元素：
+   - 以行内块级元素显示（display: inline-block），使其在水平方向上可以与其他行内元素排列，同时又可以设置宽度、高度等块级元素的属性，通常用于展示页脚的 logo 图片或图标。
+   - 注释掉的 position: absolute 表示原本可能有绝对定位的设置，但目前被注释掉，可能是因为设计需求的改变或暂时不需要该定位方式。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常与其他页脚信息在水平方向上形成布局关系。
+   - 右侧外边距为 0.625rem，调整与右侧元素的间距，使页面布局更合理。 */
+
+.fot_bot_text{
+    /*width: 62.5rem;*/
+    float: left;
+}/* 设置类名为.fot_bot_text的元素：
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于放置页脚的文本信息，如版权声明、链接等内容，与页脚 logo 等元素在水平方向上形成布局关系。 */
+
+.fot_bot_p{
+    font-size: 0rem;
+    margin-right: 1.25rem;
+}/* 设置类名为.fot_bot_p的元素：
+   - 字体大小为 0rem，可能是因为其内部的链接（a 标签）或其他文本元素会有自己独立的字体样式设置，这里先将默认字体大小设为 0。
+   - 右侧外边距为 1.25rem，调整与右侧元素的间距，使页面布局更合理，通常用于在文本元素之间留出一定的空白空间。 */
+
+.fot_bot_a{
+    font-size: 0.75rem;
+    color: #333;
+    line-height: 1.125rem;
+}/* 设置类名为.fot_bot_a的元素：
+   - 字体大小为 0.75rem，适合显示较小的文本，用于页脚中的链接或文本信息，确保字体大小在页面底部不会显得过大或过小。
+   - 颜色为 #333（深灰色），与页面整体的颜色风格相匹配，保持文本的可读性和一致性。
+   - 行高为 1.125rem，调整文本在垂直方向上的位置，使文本行之间有合适的间距，便于阅读。 */
+
+.fot_bot_span{
+    font-size: 0.625rem;
+    color: #333;
+}/* 设置类名为.fot_bot_span的元素：
+   - 字体大小为 0.625rem，比.fot_bot_a的字体更小，通常用于表示一些次要的信息或分隔符，如版权声明中的年份与其他信息之间的分隔。
+   - 颜色为 #333（深灰色），与页面整体的颜色风格相匹配，保持文本的一致性。 */
+
+.fot_bot_a1{
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    color: #cdcac2;
+}/* 设置类名为.fot_bot_a1的元素：
+   - 字体大小为 0.75rem，适合显示较小的文本，与.fot_bot_a的字体大小一致，用于页脚中的其他链接或文本信息。
+   - 行高为 1.125rem，调整文本在垂直方向上的位置，使文本行之间有合适的间距，便于阅读。
+   - 颜色为 #cdcac2（一种浅灰色），与其他文本颜色有所区分，可能用于表示一些特定的链接或信息，如隐私政策等链接的颜色设置。 */
+
+.fot_bot_p a:hover{
+    color: #ff6700;
+}/* 当鼠标悬停在类名为.fot_bot_p元素内部的链接（a 标签）上时：
+   - 文字颜色变为橙色（#ff6700），用于提供交互反馈，突出显示可点击的链接，吸引用户的注意力，提示用户该链接可进行操作。 */
+.fot_bot_right{
+	display: block;
+}
+.fot_bot_right img{
+    width: auto;
+    height: 1.75rem;
+	/* display: block; */
+
+}/* 设置类名为.fot_bot_right元素内部的图片（img 标签）：
+   - 宽度为自动（width: auto），使图片根据其原始比例自适应宽度，确保图片在显示时不会变形。
+   - 高度为 1.75rem，为图片指定固定的高度，使其在垂直方向上保持一致的尺寸，通常用于展示一些图标或小图片，如社交媒体图标等。 */
+
+.fot_bottom_img{
+    display: block;
+    margin: 1.25rem auto;
+}/* 设置类名为.fot_bottom_img的元素：
+   - 以块级元素显示（display: block），独占一行，确保图片在页面布局中的独立性和稳定性。
+   - 上下外边距为 1.25rem 和 auto，使图片在垂直方向上有一定的间距，并且在水平方向上自动居中，通常用于展示页脚底部的一些装饰图片或重要图标，使其在页面底部有较好的展示效果。 */
+
+
+.fixed{
+    width: 2.5rem;
+    position: fixed;
+    right:0;
+    bottom: 12.5rem;
+    font-size: 1rem;
+}/* 设置类名为.fixed的元素：
+   - 宽度为 2.5rem，为元素指定固定的宽度，通常用于创建一个较窄的固定侧边栏或浮动按钮组。
+   - 固定定位（position: fixed），使其在页面滚动时始终保持在固定位置，通常用于提供快速访问的功能按钮，如回到顶部、联系客服等。
+   - 右侧为 0，使其右侧与页面右侧边缘对齐，确保在页面右侧固定显示。
+   - 底部为 12.5rem，调整其在垂直方向上的位置，使其在页面底部上方一定距离处显示，避免遮挡页面主要内容，同时方便用户操作。
+   - 字体大小为 1rem，适合显示中等大小的文本，用于固定元素中的按钮文字或提示信息，确保在较小的宽度下文字仍清晰可读。 */
+.fixed_in{
+    padding-top: 0.3125rem;
+    border-bottom: 0.0625rem solid #cdcac2;
+}/* 设置类名为.fixed_in的元素：
+   - 上内边距为 0.3125rem，在元素内部上方留出一定的空白空间，通常用于调整内部元素的垂直位置，使其看起来更协调。
+   - 底部边框为 0.0625rem 宽的 #cdcac2（一种浅灰色）实线，用于分隔固定元素内部的不同部分，增加视觉层次感，可能用于区分不同的按钮或信息区域。 */
+
+.fixed_a img{
+    width: 1.625rem;
+    display: block;
+    margin: 0 auto;
+}/* 设置类名为.fixed_a元素内部的图片（img 标签）：
+   - 宽度为 1.625rem，为图片指定固定的宽度，通常用于展示固定元素中的图标或小图片，如个人中心、购物车等图标的大小设置。
+   - 以块级元素显示（display: block），独占一行，确保图片在固定元素内部的独立性和稳定性。
+   - 上下外边距为 0 和 auto，使图片在垂直方向上居中，在水平方向上自动居中，确保图标在固定元素中显示在合适的位置，提高用户交互体验。 */
+
+.fixed_p{
+    color: #cdcac2;
+    text-decoration: underline;
+    text-align: center;
+}/* 设置类名为.fixed_p的元素：
+   - 颜色为 #cdcac2（一种浅灰色），与页面整体的颜色风格相匹配，同时与固定元素中的其他元素颜色有所区分，通常用于显示固定元素中的文本信息，如按钮文字的颜色设置。
+   - 文本添加下划线（text-decoration: underline），表示该文本为可点击的链接或具有特殊含义的文本，用于提示用户可进行操作。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示，确保在固定元素中文字的整齐和美观。 */
+
+.fixed .fi_bottmo{
+    margin-top: 0.625rem;
+}/* 设置类名为.fixed元素内部类名为.fi_bottmo的元素：
+   - 上外边距为 0.625rem，调整其在垂直方向上的位置，使其与上方的元素有一定的间距，通常用于在固定元素中调整不同部分之间的垂直距离，使布局更合理。 */
+
+
+.order_head{
+    width:100%;
+    height: 6.25rem;
+    background: #fff;
+    border-bottom: 0.125rem solid #ff6700;
+}/* 设置类名为.order_head的元素：
+   - 宽度为 100%，使其在父容器中占据整个宽度，通常用于创建全宽的订单头部区域，用于展示订单相关的标题或信息。
+   - 高度为 6.25rem，为元素指定固定的高度，为内部的元素提供合适的垂直空间，如订单标题、用户信息等。
+   - 背景颜色为白色（#fff），使订单头部区域与页面其他部分有明显的区分，同时保持简洁的外观。
+   - 底部边框为 0.125rem 宽的橙色（#ff6700）实线，用于分隔订单头部和下方的内容，突出订单头部区域，同时橙色边框也可吸引用户的注意力，提示该区域的重要性。 */
+
+.head_background{
+    width: 76.625rem;
+    height: 3rem;
+    margin: 0 auto;
+    background: #fff;
+    /*background: paleturquoise;*/
+    padding: 1.625rem 0;
+}/* 设置类名为.head_background的元素：
+   - 宽度为 76.625rem，为元素指定固定的宽度，通常用于限制订单头部内部背景区域的水平范围，使其在页面中保持合适的宽度比例。
+   - 高度为 3rem，为元素指定固定的高度，为内部的元素提供合适的垂直空间。
+   - 水平居中（margin: 0 auto），使其在父元素中水平方向居中显示，保证订单头部内部背景区域在订单头部的居中对齐，提高页面的整体美观性。
+   - 背景颜色为白色（#fff），与.order_head的背景颜色一致，保持一致性。注释掉的 background: paleturquoise 表示原本可能有设置背景颜色为浅蓝色的效果，但目前被注释掉，可能是因为设计需求的改变或暂时不需要该背景颜色。
+   - 上下内边距为 1.625rem 和 0，为内部的元素提供合适的垂直空间，避免内容过于拥挤。 */
+
+.head_left_a img{
+    width: 3rem;
+    height: 3rem;
+    float: left;
+    margin-right: 3.125rem;
+}/* 设置类名为.head_left_a元素内部的图片（img 标签）：
+   - 宽度和高度均为 3rem，为图片指定固定的尺寸，通常用于展示特定的图标或图片，如商品图片或用户头像等，使其在页面中具有合适的大小和视觉效果。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常与其他相关元素在水平方向上形成布局关系，如与旁边的文字信息或其他图标相邻排列。
+   - 右侧外边距为 3.125rem，调整图片与右侧元素的间距，使页面布局更合理，避免元素之间过于拥挤，确保有足够的空间展示各个元素。 */
+
+.head_h1{
+    font-family: 黑体;
+    display: block;
+    float: left;
+    line-height: 3rem;
+}
+.head_right{
+    color: #757575;
+    font-size: 0.75rem;
+    float: right;
+    line-height: 3rem;
+    margin-right: 1.25rem;
+}/* 设置类名为.head_right的元素：
+   - 颜色为 #757575（一种浅灰色），用于设置文本的颜色，与页面中其他主要文本颜色有所区分，可能用于显示一些次要的信息或提示，如订单状态或操作说明等。
+   - 字体大小为 0.75rem，适合显示较小的文本，通常用于显示不太重要的信息，避免在页面中过于突出，但又能保证清晰可读。
+   - 向右浮动（float: right），使其在水平方向上向右排列，与左侧的元素形成左右布局结构，通常用于放置在页面右侧的信息，如用户操作链接或相关提示信息。
+   - 行高为 3rem，与图片和其他主要文本的行高保持一致，使整个订单头部区域在垂直方向上的排版更加整齐和协调。
+   - 右侧外边距为 1.25rem，调整元素与页面右侧边缘的间距，确保元素在页面中的位置合适，不会过于贴近边缘，影响美观和用户体验。 */
+
+.head_right a{
+    color: #757575;
+}/* 设置类名为.head_right元素内部的链接（a 标签）：
+   - 颜色为 #757575（一种浅灰色），与父元素的文本颜色一致，保持链接颜色与周围文本的协调性，
+	 通常用于表示与周围文本相关的链接，如查看更多订单信息或进行相关操作的链接。 */
+
+
+.order_body{
+    width: 100%;
+    height: 62.5rem;
+    background: #f5f5f5;
+    padding-top: 2.5rem;
+    padding-bottom: 3.75rem;
+}/* 设置类名为.order_body的元素：
+   - 宽度 100%使其占据整个父容器宽度，确保订单主体内容在页面中水平方向铺满。
+   - 高度 62.5rem 为其提供足够空间展示详细订单信息。
+   - 背景色 #f5f5f5 与整体页面背景区分开，凸显订单区域。
+   - 上内边距 2.5rem 和下内边距 3.75rem 用于在内部留出空白区域，使内容布局更合理，避免过于紧凑。 */
+
+.order_body_background{
+    width: 71.625rem;
+    height: 55rem;
+    background: #fff;
+    margin: 0 auto;
+    padding: 2.5rem;
+}/* 设置类名为.order_body_background的元素：
+   - 宽度 71.625rem 限制了内部订单内容的水平展示范围，使其在页面中保持合适比例。
+   - 高度 55rem 为订单详细信息提供具体的展示空间。
+   - 背景色为白色 #fff，与订单主体背景形成对比，使内部信息更清晰易读。
+   - 水平居中（margin: 0 auto）保证其在父元素中水平方向居中显示，增强页面美观性。
+   - 四周内边距 2.5rem 为内部元素提供均匀的空白间隔，利于内容排版。 */
+
+.order_line{
+    width: 71.75rem;
+    height: 2.5rem;
+    padding: 0.0625rem 0;
+    /*background: cornflowerblue;*/
+}/* 设置类名为.order_line的元素：
+   - 宽度 71.75rem 确定其在水平方向的尺寸，通常用于划分不同的订单信息块或作为信息的容器。
+   - 高度 2.5rem 为其内部元素提供垂直方向的空间限制。
+   - 上下内边距 0.0625rem 用于微调内部元素的垂直位置，使其布局更精确。*/
+.order_lien_in{
+    float: left;
+}/* 设置类名为.order_lien_in的元素：
+   - 向左浮动（float: left）使其在水平方向上向左排列，通常用于将多个相关元素排列在一行，如订单信息中的标题和具体内容。 */
+
+.order_title{
+    color: #333;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    margin-right: 1.25rem;
+}/* 设置类名为.order_title的元素：
+   - 颜色 #333 为深灰色，用于突出显示订单信息中的标题文本，使其与其他内容区分开。
+   - 字体大小 1.125rem 适合显示较大的标题，增强视觉效果。
+   - 行高 1.25rem 调整文本在垂直方向的位置，使其看起来更协调。
+   - 右侧外边距 1.25rem 用于与相邻元素保持一定的水平间距，避免文本拥挤。 */
+
+.order_span{
+    font-size: 0.875rem;
+    color: #757575;
+}/* 设置类名为.order_span的元素：
+   - 字体大小 0.875rem 适合显示较小的文本，通常用于显示订单信息中的一些补充说明或次要信息。
+   - 颜色 #757575 为浅灰色，与标题颜色区分开，进一步凸显主次关系。 */
+
+.order_lien_in a{
+    color:#ff6700 ;
+}/* 设置类名为.order_lien_in元素内部的链接（a 标签）：
+   - 颜色 #ff6700 为橙色，用于突出显示可点击的链接，吸引用户注意，引导用户进行相关操作，如查看详细信息等。 */
+
+
+.order_box{
+    width: 71.75rem;
+    height: 12.75rem;
+}/* 设置类名为.order_box的元素：
+   - 宽度为 71.75rem，为元素指定固定的宽度，通常用于容纳订单中商品或相关信息的展示区域，确保在页面中占据合适的水平空间。
+   - 高度为 12.75rem，为元素指定固定的高度，为内部的商品图片、描述等信息提供足够的垂直空间，使其布局合理。 */
+
+.order_box_in{
+    width: 16.75rem;
+    height: 11.125rem;
+    border: 0.0625rem solid #e0e0e0;
+    /*background: green;*/
+    margin-left: 1.25rem;
+    text-align: center;
+    color: #e0e0e0;
+    float: left;
+}/* 设置类名为.order_box_in的元素：
+   - 宽度为 16.75rem，高度为 11.125rem，为元素指定固定的尺寸，通常用于展示单个商品的相关信息，如图片、名称等。
+   - 边框为 0.0625rem 宽的浅灰色（#e0e0e0）实线，用于区分每个商品信息块，增加视觉清晰度。
+   - 注释掉的 background: green 表示原本可能有设置背景颜色为绿色的效果，但目前被注释掉，可能是因为设计需求的改变或暂时不需要该背景颜色。
+   - 左侧外边距为 1.25rem，调整元素在水平方向上的位置，使其与左侧的元素有合适的间距，避免过于拥挤。
+   - 文本对齐方式为居中（text-align: center），使内部的文本和元素在水平方向上居中显示，保持布局的整齐性。
+   - 颜色为 #e0e0e0（浅灰色），可能用于设置商品信息的默认文本颜色，与边框颜色相呼应，使整体视觉效果更协调。
+   - 向左浮动（float: left），使其在水平方向上向左排列，通常用于将多个商品信息块排列在一行。 */
+
+.order_box_circle{
+    margin: 4.0625rem auto 0.625rem;
+    width: 1.875rem;
+    height: 1.875rem;;
+    border-radius: 50%;
+    background: #e0e0e0;
+    line-height: 1.875rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #fff;
+
+}/* 设置类名为.order_box_circle的元素：
+   - 上下外边距分别为 4.0625rem 和 0.625rem，调整元素在垂直方向上的位置，使其在商品信息块中处于合适的位置，通常用于突出显示某个重要的状态或标记。
+   - 宽度和高度均为 1.875rem，为元素指定固定的尺寸，通常用于创建圆形的图标或标记。
+   - 边框半径为 50%，使其呈现圆形。
+   - 背景颜色为 #e0e0e0（浅灰色），与其他元素的颜色相协调。
+   - 行高为 1.875rem，使内部的文本在垂直方向上居中显示。
+   - 文本对齐方式为居中（text-align: center），使文本在水平方向上居中显示。
+   - 字体大小为 1.25rem，较大的字体用于突出显示重要的数字或标记。
+   - 字体粗细为 900，设置字体的粗细程度，使文本更醒目。
+   - 颜色为 #fff（白色），使文本在浅灰色背景上更易读。 */
+
+
+.order_in{
+    margin-right: 2.5rem;
+}
+
+.order_line_bordtr{
+    border-bottom: 0.0625rem solid #e0e0e0;
+    padding: 1.25rem 0 0.3125rem;
+}
+
+.order_lien_in .order_span_rigth{
+    float: right;
+    font-size: 0.875rem;
+    color: #757575;
+    display: block;
+    margin: 1.25rem 0 0 56.25rem;
+
+}
+.order_line_bordtr_1{
+    padding: 1.25rem 0 0.3125rem;
+
+}
+.order_PStime{
+    width: 14.375rem;
+    height: 1.5625rem;
+    border: 0.0625rem solid #e0e0e0;
+    margin-left: 2.5rem;
+    color: #e0e0e0;
+    float: left;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.5625rem;
+
+    display: block;
+}
+.order_PStime:hover{
+    border: 0.0625rem solid #ff6700;
+    color: #ff6700;
+}
+
+.order_line_bordtr_2{
+    margin-left: 4.6875rem;
+}
+.order_price{
+    font-size: 0.875rem;
+    float: left;
+}
+.order_price_tv{
+    float: left;
+}
+.order_price_1{
+    font-size: 0.875rem;
+    float: left;
+    margin-left: 32.5rem;
+}
+.order_price_2{
+    font-size: 0.875rem;
+    float: right;
+    margin-right: 1.875rem;
+    color: #ff6700
+}
+.order_price_11{
+    width: 59.375rem;
+    text-align: right;
+    font-size: 0.875rem;
+}
+.pay{
+    width: 71.75rem;
+    padding: 1.25rem 0;
+    /*float: right;*/
+
+}
+.pay_a{
+    display: block;
+    width: 9.875rem;
+    height: 2.375rem;
+    /*background: #f25807;*/
+    background: #ff6700;
+    color: #fff;
+    text-align: center;
+    line-height: 2.375rem;
+    transition: all .4s;
+    float: right;
+    margin-right: 1.25rem;
+}
+.pay_a:hover{
+    background: #f25807;
+}
+
+.trolley_background{
+    width: 100%;
+    /*height:50rem;*/
+    background: #f5f5f5;
+    padding: 2.375rem 0;
+}
+.trolley_background_in{
+    width: 76.625rem;
+    /*height: 31.25rem;*/
+    padding: 0.9375rem 0rem;
+    background: #fff;
+    margin: 0 auto;
+
+}
+.tro_tab_h{
+    width: 76.625rem;
+    height: 4.375rem;
+}
+.col{
+    float: left;
+}
+.tro_tab_check{
+    width: 6.875rem;
+    height: 4.375rem;
+}
+.tro_tab_check_p{
+    width:1.25rem;
+    height: 1.25rem;
+    background: #ff6700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.25rem;
+    margin-top: 1.5625rem;
+    margin-left:1.5625rem;
+    float: left;
+}
+.tro_tab_check_sp{
+    float: left;
+    margin-top: 1.5625rem;
+    margin-left: 0.625rem;
+}
+.tro_tab_img{
+    width: 7.5rem;
+    height: 4.375rem;
+}
+.tro_tab_img img{
+    width: 5rem;
+    height: 5rem;
+}
+.tro_tab_name{
+    width: 23.75rem;
+    height: 4.375rem;
+    text-align: left;
+    line-height: 4.375rem;
+}
+.tro_tab_price{
+    width: 9.9375rem;
+    height: 4.375rem;
+    text-align: center;
+    line-height: 4.375rem;
+}
+
+.tro_tab_num{
+    width: 9.375rem;
+    height: 4.375rem;
+    text-align: center;
+    line-height: 4.375rem;
+}
+.tro_tab_total{
+    width: 12.5625rem;
+    height: 4.375rem;
+    text-align: center;
+    line-height: 4.375rem;
+}
+.tro_tab_action{
+    width: 5rem;
+    height: 4.375rem;
+    text-align: center;
+    line-height: 4.375rem;
+}
+
+.tro_tab_h1{
+    width: 76.625rem;
+    height: 5.375rem;
+    padding: 1rem 0;
+}
+.tro_tab_h1 .tro_tab_check{
+    width: 6.875rem;
+    height: 5.375rem;
+}
+.tro_tab_h1 .tro_tab_check_p{
+    width:1.25rem;
+    height: 1.25rem;
+    background: #ff6700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.25rem;
+    margin-top: 1.5625rem;
+    margin-left:1.5625rem;
+    float: left;
+}
+.tro_tab_h1 .tro_tab_check_sp{
+    float: left;
+    margin-top: 1.5625rem;
+    margin-left: 0.625rem;
+}
+.tro_tab_h1 .tro_tab_img{
+    width: 7.5rem;
+    height: 5.375rem;
+}
+.tro_tab_h1 .tro_tab_img img{
+    width: 5.375rem;
+    height: 5.375rem;
+}
+.tro_tab_h1 .tro_tab_name{
+    width: 23.75rem;
+    height: 5.375rem;
+    text-align: left;
+    line-height: 5.375rem;
+}
+.tro_tab_name_li1{
+    line-height: 4.375rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+.tro_tab_name_li2{
+    line-height: 0rem;
+    font-size: 0.75rem;
+    color: #cdcac2;
+}
+.tro_tab_h1 .tro_tab_price{
+    width: 9.9375rem;
+    height: 5.375rem;
+    text-align: center;
+    line-height: 5.375rem;
+}
+.tro_tab_h1 .tro_tab_num{
+    width: 9.375rem;
+    height: 5.375rem;
+    text-align: center;
+    line-height: 5.375rem;
+    font-size: 0;
+}
+.tro_tab_num input{
+    width: 4.5rem;
+    height: 2.25rem;
+    float: left;
+    text-align: center;
+    margin-top: 1.5rem;
+    border: none;
+    border-bottom: 0.0625rem solid #e0e0e0;
+    border-top: 0.0625rem solid #e0e0e0;
+}
+.tro_tab_num a{
+    display: block;
+    float: left;
+    width: 2.3125rem;
+    height: 2.25rem;
+    background: #fff;
+    font-size: 0.75rem;
+    margin-top: 1.5rem;
+    line-height: 2.375rem;
+    border-top: 0.0625rem solid #e0e0e0;
+    border-bottom: 0.0625rem solid #e0e0e0;
+
+}
+.tro_tab_num a:hover{
+    background:#e0e0e0;
+}
+.tro_tab_num_p1{
+
+    border-left: 0.0625rem solid #e0e0e0;
+}
+.tro_tab_num_p2{
+    display: block;
+    border-right: 0.0625rem solid #e0e0e0;
+}
+.tro_tab_num_bac{
+    width:9.125rem ;
+    height: 2.25rem;
+    border: 0.0625rem solid #cdcac2;
+    position: relative;
+}
+.tro_tab_h1 .tro_tab_total{
+    width: 12.5625rem;
+    height: 5.375rem;
+    text-align: center;
+    line-height: 5.375rem;
+    color: #ff6700;
+}
+.tro_tab_h1 .tro_tab_action{
+    width: 5rem;
+    height: 5.375rem;
+    text-align: center;
+    line-height: 5.375rem;
+}
+.tro_tab_h1 .tro_tab_total_value {
+   color: #ff6700;
+    text-align: center;
+}
+.tro_item{
+    width: 68.75rem;
+    height: 3.125rem;
+    margin: 0.9375rem 0;
+    padding-left: 1.25rem;
+    margin-left: 6.625rem;
+    border: 0.0625rem solid #e0e0e0;
+}
+.tro_item_box{
+    width: 1.375rem;
+    height: 1.375rem;
+    background: #ff6700;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.375rem;
+    float: left;
+    text-align: center;
+    line-height: 1.1875rem;
+    margin: 0.875rem 0.875rem 0 0rem;
+
+    /*margin-left: 7.5rem;*/
+}
+.tro_item_p{
+    line-height: 3rem;
+}
+.tro_item_bot{
+    width: 74.875rem;
+    /*height: 31.25rem;*/
+    padding: 0.3125rem 0.875rem;
+    background: #fff;
+    margin: 1.25rem auto;
+
+}
+.tro_bot_ppp{
+    display: block;
+    width: 1.375rem;
+    height: 1.375rem;
+    background: #ff6700;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.375rem;
+    float: left;
+    text-align: center;
+    line-height: 1.1875rem;
+    margin: 0.875rem 0.875rem 0 0rem;
+}
+
+.cart-bar{
+    width: 79.125rem;
+    height:3.125rem;
+}
+.cart-bar_left{
+    width: 19.5rem;
+    height: 3.125rem;
+}
+.tro_close_bot{
+    width: 75.75rem;
+    height: 3.125rem;
+    padding: 0.3125rem 0rem 0.3125rem 0.875rem;
+    background: #fff;
+    margin: 1.25rem auto;
+}
+.tro_close_p{
+    display: block;
+    float: left;
+    font-size: 1.125rem;
+    color: #ff6700;
+    line-height: 3.125rem;
+}
+.tro_close_p_c{
+    display: block;
+    float: left;
+    color: #ff6700;
+    line-height: 3.125rem;
+    margin-left: 31.25rem;
+}
+.tro_close_p_c span{
+    font-size: 2.1875rem;
+}
+.tro_close_p_r{
+    display: block;
+
+    float: right;
+    width: 11.25rem;
+    height: 3.125rem;
+    color: #ffffff;
+    background: #ff6700;
+    text-align: center;
+    line-height: 3.125rem;
+    font-size: 1.125rem;
+    /*margin-right: 0.625rem;*/
+}
+
+.pro15_no1{
+    width: 76.625rem;
+    height: 3.75rem;
+    margin: 0 auto ;
+}
+.pro15_no1 h2{
+    font-size: 1.125rem;
+    line-height: 3.75rem;
+    color: #212121;
+}
+.pro15_no1_float{
+    float: left;
+    line-height: 3.75rem;
+    margin-right: 0.625rem;
+    font-size: 0.75rem;
+    color: #616161;
+}
+.pro15_no1_float_rigth{
+    float: right;
+    line-height: 3.75rem;
+    font-size: 0.75rem;
+    color:#616161;
+    margin-left: 0.625rem;
+}
+.pro15_no1{
+    width: 76.625rem;;
+    height: 3.75rem;
+    margin:0 auto;
+    /*display: none;*/
+}
+.pro15_no2{
+    width: 100%;
+    height: 3.125rem;
+    transition:all 1s linear;
+    margin: 0;
+}
+.pro15_no2_in{
+    width: 20.625rem;
+    height: 3.125rem;
+    margin: 0 auto;
+}
+
+.pro15_no2_in_a{
+    display: block;
+    line-height: 3.125rem;
+	/* background-color: #ededed; */
+    float: left;
+    margin:0 0.625rem;
+}
+.pro15_no2_close{
+    /*transition:all 5s linear;*/
+    height: 0rem;
+    overflow: hidden;
+}
+.pro15_no2_close:hover{}
+.pro15_no3{
+    width: 76.625rem;
+    height: 63.125rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 0.75rem;
+}
+.pro15_no3_img{
+    width: 37.875rem;;
+    height: 37.5rem;
+    float: left;
+	overflow: hidden;
+}
+.pro15_no3_right{
+    width: 38.75rem;
+    height: 43.75rem;
+    float: left;
+}
+.pro15_no3_right h1{
+    width:38.75rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #212121;
+    margin-bottom: 0.625rem;
+}
+.pro15_no3_right_p2{
+    width: 38.75rem;
+	height: auto;
+    /* height:2rem; */
+    padding-top:0.5rem;
+    margin-left: -0.3125rem;
+    color: #b0b0b0;
+}
+.pro15_no3_right_span2{
+    font-size: 1rem;
+    color:#ff6700 ;
+	
+}
+.pro15_no3_right_p3{
+    width:38.75rem;
+	height: auto;
+    /* height: 3rem; */
+    color: #ff6700;
+	margin-top: 1.2rem;
+    font-size: 0.97rem;
+    margin-left: 0.125rem;
+	margin-bottom: 0rem;
+    /* border-bottom: 0.0625rem solid #b0b0b0; */
+}
+.pro15_no3_right_p3_price{
+    width:38.75rem;
+    height: 3rem;
+    color: #ff6700;
+    font-size: 1.2rem;
+	margin-top: 1rem;
+    margin-left: 0.125rem;
+    border-bottom: 0.0625rem solid #b0b0b0;
+}
+.pro15_no3_right_span3{
+    margin-left: 0.625rem;
+    color: #b0b0b0;
+    font-size: 0.875rem;
+    text-decoration: line-through;
+}
+.pro15_no3_right_div4{
+    width: 38.75rem;
+	/* height: auto; */
+    height: 2rem;
+    padding: 0.625rem 0;
+    border-bottom: 0.125rem solid #b0b0b0;
+}
+.pro15_no3_right_div4_in{
+    width: 38.75rem;
+    height: 1.125rem;
+
+}
+.pro15_no3_right_p4{
+    width: 5rem;
+    height: 1.75rem;
+    background: #ff6700;
+    color: #fff;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0;
+    line-height: 1.75rem;
+    display: block;
+    float: left;
+}
+.pro15_no3_right_div4 span{
+    float: left;
+    margin-left: 0.625rem;
+    line-height: 1.75rem;
+    color: #333;
+}
+.pro15_no3_right_div5{
+    width: 34.25rem;
+    height: 3.125rem;
+    padding: 1.875rem 2.5rem 1.875rem 2rem;
+    background: #fafafa;
+    border: 0.0625rem solid #e0e0e0 ;
+    margin: 1.6rem 0;
+}
+.pro15_no3_right_div5_span{
+    color: #ff6700;
+}
+.pro15_no3_right_div6{
+    width: 38.75rem;
+    height: 1.6rem;
+	margin-top: 3rem;
+}
+.pro15_no3_right_div7{
+    width: 38.5rem;
+    height: 5rem;
+    margin: 0 auto 1rem;
+    padding: 0 0.125rem;
+}
+.pro15_no3_right_div7_in{
+    width: 15.25rem;
+    height: 3.375rem;
+    border: 0.0625rem solid #e0e0e0;
+    margin: 0.625rem 0;
+    float: left;
+    line-height: 3.375rem;
+    padding: 0 1.6875rem;
+    color: #333;
+}
+
+.pro15_no3_right_div7_in_hover {
+    border: 0.0625rem solid #ff6700;
+    color: #ff6700;
+}
+.pro15_no3_right_div7_in_onclik{
+    width: 15.25rem;
+    height: 3.375rem;
+    border: 0.0625rem solid #ff6700;
+    margin: 0.625rem 0;
+    float: left;
+    line-height: 3.375rem;
+    padding: 0 1.6875rem;
+    color: #ff6700;
+}
+.pro15_no3_right_div7_span{
+    float: right;
+    color: #e0e0e0;
+}
+.pro15_no3_float{
+    float: right;
+}
+.pro15_no3_right_div9{
+    width: 38.75rem;
+    height: 12.1875rem;
+}
+.pro15_no3_right_div9 img{
+	/* clear: both; */
+	width: 0.625rem;
+	height: 0.875rem;
+    /* width: 0.625rem;
+    height: 0.875rem; */
+    margin:0 1.25rem 0 5.5rem;
+}
+.pro15_no3_right_div9_in{
+    width: 15.25rem;
+    height: 3.375rem;
+    border: 0.0625rem solid #e0e0e0;
+    margin: 0.625rem 0;
+    float: left;
+    line-height: 3.375rem;
+    padding: 0 1.6875rem;
+    color: #333;
+}
+.pro15_no3_right_div10{
+    width: 35rem;
+    height: 4.875rem;
+    background: #e0e0e0;
+	margin-top:0rem ;
+    padding: 1.875rem;
+}
+.pro15_no3_right_span10{
+    float: right;
+}
+.pro15_no3_right_div10_p1{
+    width: 22.5rem;
+    height: 2.5rem;
+    float: left;
+}
+.pro15_no3_right_div10_p2{
+    width: 12.5rem;
+    height: 1.875rem;
+    font-size: 1.875rem;
+    color: #ff6700;
+}
+.pro15_no3_right_div11{
+    width: 18.75rem;
+    height: 3.375rem;
+    background: #ff6700;
+    color: #fff;
+    line-height: 3.125rem;
+    text-align: center;
+    margin-top: 1.875rem;
+}
+.pro15_no3_right_div12{
+    width: 38.75rem;
+    height: 3.125rem;
+    margin-top: 1.25rem;
+}
+.pro15_no3_right_div12_y{
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: 0.125rem solid #e0e0e0;
+    line-height: 1.25rem;
+    text-align: center;
+    color:#e0e0e0 ;
+    float: left;
+}
+.pro15_no3_right_div12_z{
+    color:#e0e0e0 ;
+    line-height: 1.25rem;
+    float: left;
+    margin-right: 1.25rem;
+}
+
+.register{
+    width:100%;
+    height: 36.75rem;
+    background: url("../img/register1.jpg") center;
+}
+.register_head{
+    width: 70.625rem;
+    height: 4.8125rem;
+    margin: 0 auto;
+    padding-top: 1.3125rem;
+}
+.register_head img{
+    float: left;
+}
+.register_head_right{
+    width: 18.75rem;;
+    height: 3.4375rem;
+    float: left;
+    margin-left: 1.25rem;
+}
+.register_head_right_p1{
+    font-size: 1.625rem;
+    color: #333;
+}
+.register_head_right_p2{
+    font-size: 0.875rem;
+    color: #333;
+}
+.register_boby{
+    width: 70.625rem;
+    height: 40.3125rem;
+    /*background: pink;*/
+    /*opacity: 0.5;*/
+    margin: 0 auto;
+}
+.register_boby_min{
+    width: 25.625rem;
+    height: 32.75rem;
+    float: right;
+    background: white;
+    margin-top: 1.25rem;
+}
+.register_boby_no1_in{
+    margin-top: 1.4375rem;
+    margin-left: 2.625rem;
+
+}
+.register_boby_sapn{
+    margin: 0 1.875rem;
+}
+.register_boby_no1{
+    width:25.625rem;
+    height:5.1875rem;
+    margin-top: 0rem;
+    float: right;
+    font-size: 1.8125rem;
+    color: #cccccc;
+
+}
+.register_boby_no2{
+    width: 25.625rem;
+    height: 14.375rem;
+    float: right;
+}
+.register_boby_no2 input{
+    width: 21.625rem;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    padding: 0.8125rem 1rem 0.8125rem 0.875rem;
+    display: block;
+    margin: 1.25rem auto;
+}
+.register_boby_no2_div{
+    width: 23.5rem;
+    height: 3rem;
+    background: #ff6700;
+    margin: 0 auto;
+}
+.register_boby_no2_div span{
+    text-align: center;
+    line-height: 3rem;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+.register_boby_no2 p{
+    color: #e0e0e0;
+    font-size: 0.5rem;
+}
+.register_boby_no3{
+    width: 23.5rem;
+    font-size: 0.875rem;
+    margin:0 auto;
+}
+.register_boby_no3_span{
+    float: right;
+    color: #5f5750;
+}
+.register_foot img{
+    /*width: 70.625rem;*/
+    /*height: 12.5rem;*/
+    display: block;
+    margin: 0 auto;
+    background: black;
+}
+
+.sign_background{
+    width:100%;
+    height: 50rem;
+    background: #f9f9f9;
+    padding-top: 2.5rem; ;
+}
+.sign_background_in{
+    background: white;
+    width: 53.375rem;
+    height: 38.75rem;
+    margin: 0 auto;
+}
+.sign_background_no1{
+    width: 53.375rem;
+    height: 5.5rem;
+}
+.sign_background_no1 img{
+    display: block;
+	width: 3.4375rem;
+	height: 3.4375rem;
+    margin: 0 auto;
+}
+.sign_background_no2{
+    width: 100%;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    text-align: center;
+    font-size: 1.875rem;
+}
+.sign_background_no3{
+    width: 20.75rem;
+    height: 19.875rem;
+    margin: 0 auto;
+    padding: 1.875rem 0;
+}
+.sign_background_no3 h4{
+    padding-bottom: 0.3125rem;
+    color: #333;
+    font-weight: normal;
+    /*position: relative;*/
+    display: block;
+}
+
+.sign_background_no4_in{
+    width: 20.75rem;
+    height: 2.625rem;
+}
+.sign_background_no4 select{
+    width: 20.4rem;;
+    height: 2.5rem;
+    border: 0.0625rem solid #e0e0e0;
+}
+.sign_background_no4_in{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.0625rem solid #e0e0e0;
+    display: block;
+    float: right;
+    /*position: absolute;*/
+    top: 0;
+    right: 0;
+    background: white;
+}
+.sign_background_no4_in div{
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #e0e0e0;
+    text-align: center;
+    line-height: 1.25rem;
+    margin: 0.625rem auto 0;
+    color: #e0e0e0;
+}
+.sign_background_no3 p {
+    color: #333;
+    font-size: 0.875rem;
+    line-height: 2.5rem;
+}
+.sign_background_no5{
+    width: 20.75rem;
+    height: 2.625rem;
+}
+.sign_no5_div1{
+    width: 4.375rem;
+    height: 2.5rem;
+    float: left;
+    border: 0.0625rem solid #e0e0e0;
+    text-align: center;
+    line-height: 2.5rem;
+    background: white;
+}
+.sign_no5_div1 select{
+    width: 3.75rem;
+    height: 2.5rem;
+    text-align: center;
+    border: none;
+    display: block;
+    margin-left: 0.75rem;
+}
+.sign_no5_div2{
+    width: 16.125rem;
+    height: 2.5rem;
+    float: left;
+    border: 0.0625rem solid #ff6700;
+}
+.sign_background_no6{
+
+    height: 2.625rem;
+    margin-top: 1.25rem;
+    background: #ff6700;
+    color: white;
+    text-align: center;
+    line-height: 2.625rem;
+}
+.sign_background_no7{
+
+    height: 2.5rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #c1c1c1;
+}
+.sign_background_no7 span{
+    color: #333;
+}
+.sign_background_no8{
+    width: 53.375rem;;
+    height: 12.5rem;
+    margin: 0 auto;
+}
